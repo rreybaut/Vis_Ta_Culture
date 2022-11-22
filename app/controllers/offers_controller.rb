@@ -6,14 +6,19 @@ class OffersController < ApplicationController
   end
 
   def new
-    # @offer = Offer.new
+    @offer = Offer.new
   end
 
   def show
   end
 
   def create
-
+    # @offer = Offer.new(offer_params)
+    # if @offer.save
+    #   redirect_to offer_path(@offer)
+    # else
+    #   render :new, status: :unprocessable_entity
+    # end
   end
 
   def destroy
@@ -24,5 +29,9 @@ class OffersController < ApplicationController
 
   def set_offer
     @offer = Offer.find(params[:id])
+  end
+
+  def offer_params
+    params.require(:offer).permit(:country, :city, :price, :lodging, :meal, :pet, :smoker, :excursion, :child)
   end
 end
