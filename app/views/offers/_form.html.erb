@@ -1,0 +1,22 @@
+<div class="container">
+  <%= simple_form_for offer do |f| %>
+    <%= f.input :country, as: :string %>
+    <%= f.input :city %>
+    <%= f.input :price %>
+    <%= f.check_box :lodging %>
+    <%= f.label :lodging %>
+    <%= f.check_box :meal %>
+    <%= f.label :meal %>
+    <%= f.check_box :pet %>
+    <%= f.label :pet %>
+    <%= f.check_box :excursion %>
+    <%= f.label :excursion %>
+    <%= f.check_box :smoker %>
+    <%= f.label :smoker %>
+    <%= f.check_box :child %>
+    <%= f.label :child %>
+    <br>
+    <br>
+    <span><%= f.submit %></span>
+  <% end %>
+</div>
