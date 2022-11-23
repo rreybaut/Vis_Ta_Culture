@@ -1,10 +1,15 @@
-<div class="container">
+<div class="container show-container">
   <h1> The offer selected</h1>
+  <p>Country: <%= @offer.country %> </p>
+  <p>City:  <%= @offer.city %> </p>
+  <p>Price:  <%= @offer.price %> </p>
+  <p>Lodging:  <%= @offer.lodging %> </p>
+  <p>Meal included:  <%= @offer.meal %> </p>
+  <p>Pet friendly:  <%= @offer.pet %> </p>
+  <p>Smoker friendly:  <%= @offer.smoker %> </p>
+  <p>Excursion ok:  <%= @offer.excursion %> </p>
 
-  <p><%= @offer.country %> </p>
-  <p> <%= @offer.city %> </p>
   <br>
-  <button><%= link_to "Create an offer", new_offer_path  %></button>
 
   <br>
   <br>

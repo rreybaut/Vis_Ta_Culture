@@ -1,6 +1,8 @@
 .navbar-lewagon {
+  top: -16px;
+  height: 50px;
   justify-content: space-between;
-  background: linear-gradient(90deg, rgba(0, 179, 255, 0.8), rgb(255, 200, 0), rgb(109, 4, 88) 70.71%);
+  background: linear-gradient(90deg, rgba(0, 179, 255, 0.8), rgba(255, 200, 0, 0.468), rgba(109, 4, 88, 0.419) 70.71%);
 }
 
 .navbar-lewagon .navbar-collapse {

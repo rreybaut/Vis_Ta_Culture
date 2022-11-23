@@ -1,6 +1,8 @@
 <div class="container index-container">
-  <h1> All the offers </h1>
-
+  <h1> Offers </h1>
+<br>
+  <%= link_to "Create an offer", new_offer_path  %>
+<br>
   <ul>
     <% @offers.each do |offer|  %>
       <% if offer.city == "Buenos Aires" %>
