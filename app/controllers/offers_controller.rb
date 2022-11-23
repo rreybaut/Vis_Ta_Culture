@@ -5,20 +5,23 @@ class OffersController < ApplicationController
     @offers = Offer.all
   end
 
-  def new
-    @offer = Offer.new
-  end
-
   def show
   end
 
+  def new
+    @offer = Offer.new
+    @offer.user_id = current_user
+  end
+
   def create
-    # @offer = Offer.new(offer_params)
-    # if @offer.save
-    #   redirect_to offer_path(@offer)
-    # else
-    #   render :new, status: :unprocessable_entity
-    # end
+    @offer = Offer.new(offer_params)
+    if @offer.save
+      # redirect_to offer_path(@offer)
+      redirect_to offers_path
+    else
+      render :new, status: :unprocessable_entity
+      # raise
+    end
   end
 
   def destroy
@@ -32,6 +35,6 @@ class OffersController < ApplicationController
   end
 
   def offer_params
-    params.require(:offer).permit(:country, :city, :price, :lodging, :meal, :pet, :smoker, :excursion, :child)
+    params.require(:offer).permit(:country, :city, :price, :lodging, :meal, :pet, :smoker, :excursion, :child, :user_id)
   end
 end
