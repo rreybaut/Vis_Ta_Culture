@@ -1,9 +1,13 @@
-<h1> All the offers </h1>
+<div class="container">
+  <h1> All the offers </h1>
 
-<ul>
-  <% @offers.each do |offer|  %>
-    <li><%= link_to offer.id, offer_path(offer) %></li>
-  <% end  %>
-</ul>
-<br>
-<%= link_to "Create an offer", new_offer_path  %>
+  <ul>
+    <% @offers.each do |offer|  %>
+      <li><%= offer.country %>
+      <br>
+      <%= link_to offer.city, offer_path(offer) %></li>
+    <% end  %>
+  </ul>
+  <br>
+  <%= link_to "Create an offer", new_offer_path  %>
+</div>
