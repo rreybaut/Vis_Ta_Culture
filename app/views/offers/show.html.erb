@@ -9,9 +9,13 @@
   <p>Smoker friendly:  <%= @offer.smoker %> </p>
   <p>Excursion ok:  <%= @offer.excursion %> </p>
 
-  <br>
 
   <br>
+
+  <%= cl_image_tag @offer.photo.key, height: 300, width: 400, crop: :fill %>
+  <br>
+  <%= link_to "Book in", class: "btn btn-ghost" %>
+
   <br>
   <%= link_to "Back to index", offers_path  %>
 </div>
