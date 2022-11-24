@@ -1,31 +1,72 @@
+
+
 <div class="container show-container">
+<div class="d-flex" >
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
-url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-  <div class="container">
+  <div class="parent">
+      <div class="card">
+        <p>Country: <%= @offer.country %> </p>
+      </div>
 
-  <h1> The offer selected</h1>
+      <div class="card">
+        <p>City:  <%= @offer.city %> </p>
+      </div>
+      <div class="card">
+        <p>Price:  <%= @offer.price %> </p>
+      </div>
 
-  <p>Country: <%= @offer.country %> </p>
-  <p>City:  <%= @offer.city %> </p>
-  <p>Price:  <%= @offer.price %> </p>
-  <p>Lodging:  <%= @offer.lodging %> </p>
-  <p>Meal included:  <%= @offer.meal %> </p>
-  <p>Pet friendly:  <%= @offer.pet %> </p>
-  <p>Smoker friendly:  <%= @offer.smoker %> </p>
-  <p>Excursion ok:  <%= @offer.excursion %> </p>
+      <div class="card">
+        <p>Lodging:
+        <% if @offer.lodging %>
+        <i class="fa-solid fa-bed"></i>
+            <% else %>
+            <i class="fa-solid fa-ban"></i>
+        <% end %> </p>
+      </div>
 
+      <div class="card">
+        <p>Meal included: </i>
+        <% if @offer.meal %>
+          <i class="fa-solid fa-utensils"></i>
+        <% end %> </p>
+      </div>
 
-  <br>
+      <div class="card">
+        <p>Pet friendly:
+        <% if @offer.pet %>
+          <i class="fa-solid fa-paw"></i>
+            <% else %>
+            <i class="fa-solid fa-ban"></i>
+        <% end %> </p>
+      </div>
 
-  <%= cl_image_tag @offer.photo.key, height: 300, width: 400, crop: :fill %>
-  <br>
-  <%= link_to "Book in", class: "btn btn-ghost" %>
+      <div class="card">
+        <p>Smoker friendly:
+        <% if @offer.smoker  %>
+        <i class="fa-solid fa-smoking"></i>
+          <% else %>
+          <i class="fa-solid fa-ban-smoking"></i>
+        <% end  %> </p>
+      </div>
 
-  <br>
-   <%= link_to "Back to index", offers_path  %>
-  <a class="btn btn-flat" href="#">Apply now</a>
-</div>
+      <div class="card">
+        <p>Excursion ok:
+        <% if @offer.excursion %>
+        <i class="fa-solid fa-cable-car"></i>
+          <% else %>
+          <i class="fa-solid fa-ban"></i>
+        <% end %> </p>
+      </div>
+    </div>
+      <%= cl_image_tag @offer.photo.key, height: 350, width: 450, crop: :fill, class: "image" %>
   </div>
+    <br>
+    <%= link_to "Book in", class: "btn btn-primary" %>
+    <%# <%= link_to "Book in",  new_offer_booking_path,  class: "btn btn-ghost" %>
+    <br>
+    <%= link_to "Back to index", offers_path, class: "btn btn-primary" %>
+
+
+  <br>
 <%= link_to "Delete", offer_path(@offer),data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}%>
 </div>
