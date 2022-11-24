@@ -15,11 +15,13 @@ url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/back
   <p>Smoker friendly:  <%= @offer.smoker %> </p>
   <p>Excursion ok:  <%= @offer.excursion %> </p>
 
-  <br>
 
   <br>
-  <p><%= @offer.country %> </p>
-  <p> <%= @offer.city %> </p>
+
+  <%= cl_image_tag @offer.photo.key, height: 300, width: 400, crop: :fill %>
+  <br>
+  <%= link_to "Book in", class: "btn btn-ghost" %>
+
   <br>
    <%= link_to "Back to index", offers_path  %>
   <a class="btn btn-flat" href="#">Apply now</a>

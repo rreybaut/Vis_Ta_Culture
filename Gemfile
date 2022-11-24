@@ -2,6 +2,10 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
+# We can use the dotenv gem for security:
+gem "dotenv-rails", groups: [:development, :test]
+
+gem "cloudinary"
 
 # Gemfile
 gem "devise"
