@@ -1,5 +1,11 @@
 <div class="container show-container">
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+
   <h1> The offer selected</h1>
+
   <p>Country: <%= @offer.country %> </p>
   <p>City:  <%= @offer.city %> </p>
   <p>Price:  <%= @offer.price %> </p>
@@ -17,5 +23,9 @@
   <%= link_to "Book in", class: "btn btn-ghost" %>
 
   <br>
-  <%= link_to "Back to index", offers_path  %>
+   <%= link_to "Back to index", offers_path  %>
+  <a class="btn btn-flat" href="#">Apply now</a>
+</div>
+  </div>
+<%= link_to "Delete", offer_path(@offer),data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}%>
 </div>
