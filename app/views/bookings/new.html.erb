@@ -1,0 +1,22 @@
+<div class="container new-container">
+  <h1>Book your offer</h1>
+
+  <div class="container">
+    <%= simple_form_for [@offer, @booking] do |f| %>
+      <h3>Choose your dates please :</h3>
+      <%= f.input :date, as: :date%>
+      <br>
+      <%= f.label :booked %>
+      <%= f.check_box :booked %>
+      <br>
+      <%= f.label "Add a comment :" %>
+      <%= f.input :comment, as: :text, label: false %>
+      <br>
+      <br>
+      <span><%= f.submit %></span>
+    <% end %>
+  </div>
+
+  <br>
+  <%= link_to "Back to index", offers_path  %>
+</div>
