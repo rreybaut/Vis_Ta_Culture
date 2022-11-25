@@ -1,9 +1,10 @@
 <div class="container index-container">
-  <h1> Offers </h1>
-<br>
-  <%= link_to "Create an offer", new_offer_path  %>
-<br>
-  <ul>
+  <br>
+  <div class="flex-new-btn">
+    <%= link_to "Create an offer", new_offer_path, class: "btn btn-flat" %>
+  </div>
+  <br>
+  <ul class="cards-index">
     <% @offers.each do |offer|  %>
       <% if offer.city == "Buenos Aires" %>
         <% image = "buenos-aires.jpg" %>
@@ -18,22 +19,19 @@
         <% else %>
         <% image = "newyork.jpg" %>
       <% end %>
-      <li>
-
-        <%= link_to offer_path(offer) do %>
+    <li>
+      <%= link_to offer_path(offer) do %>
         <div class="card-trip">
           <%= image_tag image %>
-          <div class="card-trip-infos">
-            <div>
+            <div class="card-trip-infos">
               <h2><%= offer.city %> - <%= offer.country %></h2>
             </div>
-            <h2 class="card-trip-pricing">$<%= offer.price %></h2>
-          </div>
+            <div>
+              <h2 class="card-trip-pricing">$<%= offer.price %></h2>
+            </div>
         </div>
-        <% end %>
-      </li>
-    <% end  %>
+      <% end %>
+    </li>
+  <% end  %>
   </ul>
-  <br>
-  <%= link_to "Create an offer", new_offer_path  %>
 </div>
