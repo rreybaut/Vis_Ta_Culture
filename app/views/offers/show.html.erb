@@ -62,7 +62,6 @@
     <p>
     <ul>
       <% @offer.bookings.each do |booking| %>
-        <% if booking.date? %>
           <h3>
             Vos réservations :
           </h3>
@@ -71,11 +70,8 @@
             <br>
             <%= booking.comment %>
             <br>
-            <%= link_to "delete", booking_path, data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?'}  %>
+            <%= link_to "delete", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?'}  %>
           </li>
-        <% else %>
-          <h3>Vous n'avez pas encore réservé !</h3>
-        <% end %>
       <% end %>
     </ul>
     </p>
