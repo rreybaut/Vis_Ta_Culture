@@ -1,80 +1,84 @@
-
-
 <div class="container show-container">
-<div class="d-flex" >
-
-  <div class="parent">
+  <div class="d-flex" >
+    <div class="parent">
       <div class="card">
         <p>Country: <%= @offer.country %> </p>
       </div>
-
       <div class="card">
-        <p>City:  <%= @offer.city %> </p>
+        <p>City: <%= @offer.city %> </p>
       </div>
       <div class="card">
-        <p>Price:  <%= @offer.price %> </p>
+        <p>Price: <%= @offer.price %> </p>
       </div>
-
       <div class="card">
         <p>Lodging:
         <% if @offer.lodging %>
-        <i class="fa-solid fa-bed"></i>
-            <% else %>
-            <i class="fa-solid fa-ban"></i>
+          <i class="fa-solid fa-bed"></i>
+        <% else %>
+          <p>None</p>
         <% end %> </p>
       </div>
-
       <div class="card">
         <p>Meal included: </i>
         <% if @offer.meal %>
           <i class="fa-solid fa-utensils"></i>
         <% end %> </p>
       </div>
-
       <div class="card">
         <p>Pet friendly:
         <% if @offer.pet %>
           <i class="fa-solid fa-paw"></i>
-            <% else %>
-            <i class="fa-solid fa-ban"></i>
-        <% end %> </p>
-      </div>
-
-      <div class="card">
-        <p>Smoker friendly:
-        <% if @offer.smoker  %>
-        <i class="fa-solid fa-smoking"></i>
-          <% else %>
-          <i class="fa-solid fa-ban-smoking"></i>
-        <% end  %> </p>
-      </div>
-
-      <div class="card">
-        <p>Excursion ok:
-        <% if @offer.excursion %>
-        <i class="fa-solid fa-cable-car"></i>
-          <% else %>
+        <% else %>
           <i class="fa-solid fa-ban"></i>
         <% end %> </p>
       </div>
+      <div class="card">
+        <p>Smoker friendly:
+        <% if @offer.smoker  %>
+          <i class="fa-solid fa-smoking"></i>
+        <% else %>
+          <i class="fa-solid fa-ban-smoking"></i>
+        <% end %> </p>
+      </div>
+      <div class="card">
+        <p>Excursion:
+        <% if @offer.excursion %>
+          <i class="fa-solid fa-cable-car"></i>
+        <% else %>
+          <i class="fa-solid fa-ban"></i>
+        <% end %> </p>
+      </div>
+      </div>
+      <% if @offer.photo.attached? %>
+        <%= cl_image_tag @offer.photo.key, height: 350, width: 450, crop: :fill, class: "image" %>
+      <% end %>
     </div>
-      <%= cl_image_tag @offer.photo.key, height: 350, width: 450, crop: :fill, class: "image" %>
-  </div>
-    <br>
     <%= link_to "Booking", new_offer_booking_path(@offer), class: "btn btn-primary" %>
-
-    <br>
     <%= link_to "Back to index", offers_path, class: "btn btn-primary" %>
-
-
-  <br>
-    <%= link_to "Update", edit_offer_path(@offer),data: {turbo_method: :update},class: "btn btn-primary" %>
-  <br>
-    <%= link_to "Delete", edit_offer_path(@offer),data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"},class: "btn btn-danger" %>
-
-
-</div>
-
-<div class="btn-group" role="group" aria-label="Basic example">
-
+    <%= link_to "Update", edit_offer_path(@offer), data: {turbo_method: :update}, class: "btn btn-primary" %>
+    <%= link_to "Delete", offer_path(@offer), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-danger" %>
   </div>
+  <div>
+    <p>
+    <ul>
+      <% @offer.bookings.each do |booking| %>
+        <% if booking.date? %>
+          <h3>
+            Vos réservations :
+          </h3>
+          <li>
+            <%= booking.date %>
+            <br>
+            <%= booking.comment %>
+            <br>
+            <%= link_to "delete", booking_path, data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?'}  %>
+          </li>
+        <% else %>
+          <h3>Vous n'avez pas encore réservé !</h3>
+        <% end %>
+      <% end %>
+    </ul>
+    </p>
+  </div>
+  <%# <div class="btn-group" role="group" aria-label="Basic example"></div> %>
+</div>
