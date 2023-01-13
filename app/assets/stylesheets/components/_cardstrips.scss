@@ -5,18 +5,13 @@
   padding-bottom: 20px;
   margin: 12px;
   border-radius: 10px;
-
-
 }
-
 .card-trip > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
   border-bottom: 0px;
-
 }
-
 .card-trip h2 {
   font-size: 16px;
   font-weight: bold;
@@ -24,24 +19,18 @@
   text-align: center;
   text-decoration: none;
 }
-
 .card-trip p {
   font-size: 12px;
   opacity: .7;
   text-align: center;
   margin: 12px;
 }
-
-
 .card-trip .card-trip-infos {
   padding: 16px;
   display: flex;
   justify-content: center;
-
   position: relative;
-
 }
-
 .card-trip-infos .card-trip-user {
   position: absolute;
   right: 16px;

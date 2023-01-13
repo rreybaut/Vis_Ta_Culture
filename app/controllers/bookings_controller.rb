@@ -1,4 +1,6 @@
 class BookingsController < ApplicationController
+  before_action :set_booking, only: %i[new create]
+
   def new
     @offer = Offer.find(params[:offer_id])
     @booking = Booking.new
@@ -17,9 +19,19 @@ class BookingsController < ApplicationController
     end
   end
 
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to offer_path(@booking.offer), notice: "Booking was successfully destroyed."
+  end
+
   private
 
+  def set_booking
+    @offer = Offer.find(params[:offer_id])
+  end
+
   def booking_params
-    params.require(:booking).permit(:date, :comment, :booked)
+    params.require(:booking).permit(:date, :comment)
   end
 end
