@@ -1,15 +1,16 @@
 .navbar-lewagon {
-  height: 60px;
-  justify-content: space-between;
+  z-index: 1;
+  width: -webkit-fill-available;
+  height: 56px;
   background: linear-gradient(90deg, rgb(111, 0, 255), rgb(255, 0, 204) 100%);
-}
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-.navbar-lewagon .navbar-brand img {
-  width: 240px;
 }
 .logo {
   position: absolute;
   top: -10px;
 }
+// .navbar-lewagon .navbar-collapse {
+//   flex-grow: 0;
+// }
+// .navbar-lewagon .navbar-brand img {
+  // width: 240px;
+// }
