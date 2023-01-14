@@ -1,16 +1,16 @@
-<div class="container show-container">
-  <div class="d-flex" >
-    <div class="parent">
-      <div class="card">
+<div class="offer-page">
+  <div class="offer-box" >
+    <div class="interrest-box">
+      <div class="interrest">
         <p>Country</p><p><%= @offer.country %> </p>
       </div>
-      <div class="card">
+      <div class="interrest">
         <p>City: <%= @offer.city %> </p>
       </div>
-      <div class="card">
+      <div class="interrest">
         <p>Price: <%= @offer.price %> </p>
       </div>
-      <div class="card">
+      <div class="interrest">
         <p>Lodging:
         <% if @offer.lodging %>
           <i class="fa-solid fa-bed"></i>
@@ -18,7 +18,7 @@
           <p>None</p>
         <% end %> </p>
       </div>
-      <div class="card">
+      <div class="interrest">
         <p>Meal included: </i>
         <% if @offer.meal %>
           <i class="fa-solid fa-utensils"></i>
@@ -26,7 +26,7 @@
           <p>None</p>
         <% end %> </p>
       </div>
-      <div class="card">
+      <div class="interrest">
         <p>Pet friendly:
         <% if @offer.pet %>
           <i class="fa-solid fa-paw"></i>
@@ -34,7 +34,7 @@
           <i class="fa-solid fa-ban"></i>
         <% end %> </p>
       </div>
-      <div class="card">
+      <div class="interrest">
         <p>Smoker friendly:
         <% if @offer.smoker  %>
           <i class="fa-solid fa-smoking"></i>
@@ -42,7 +42,7 @@
           <i class="fa-solid fa-ban-smoking"></i>
         <% end %> </p>
       </div>
-      <div class="card">
+      <div class="interrest">
         <p>Excursion:
         <% if @offer.excursion %>
           <i class="fa-solid fa-cable-car"></i>
@@ -50,15 +50,18 @@
           <i class="fa-solid fa-ban"></i>
         <% end %> </p>
       </div>
+      <div class="offer-pix">
+        <% if @offer.photo.attached? %>
+          <%= cl_image_tag @offer.photo.key, height: 350, width: 450, crop: :fill, class: "image" %>
+        <% end %>
       </div>
-      <% if @offer.photo.attached? %>
-        <%= cl_image_tag @offer.photo.key, height: 350, width: 450, crop: :fill, class: "image" %>
-      <% end %>
     </div>
-    <%= link_to "Booking", new_offer_booking_path(@offer), class: "btn btn-primary" %>
-    <%= link_to "Back to index", offers_path, class: "btn btn-primary" %>
-    <%= link_to "Update", edit_offer_path(@offer), data: {turbo_method: :update}, class: "btn btn-primary" %>
-    <%= link_to "Delete", offer_path(@offer), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-danger" %>
+    <div class="offer-button-box">
+      <%= link_to "Booking", new_offer_booking_path(@offer), class: "btn btn-primary" %>
+      <%= link_to "Back to index", offers_path, class: "btn btn-primary" %>
+      <%= link_to "Update", edit_offer_path(@offer), data: {turbo_method: :update}, class: "btn btn-primary" %>
+      <%= link_to "Delete", offer_path(@offer), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-danger" %>
+    </div>
   </div>
   <div>
     <p>
