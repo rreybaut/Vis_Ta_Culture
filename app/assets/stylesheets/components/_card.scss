@@ -7,17 +7,16 @@
   margin-bottom: 8px;
   margin-top: 8px;
 }
-
-  .parent {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
-
-    .div1 { grid-area: 1 / 1 / 5 / 3; }
-
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+.div1 {
+  grid-area: 1 / 1 / 5 / 3;
+}
 .card p {
   // font: small-caps bold 1rem sans-serif;
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;

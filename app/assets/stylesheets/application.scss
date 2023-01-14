@@ -10,24 +10,3 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import "pages/new_offer";
-@import "pages/show";
-
-body {
-  overflow-y: scroll; /* Add the ability to scroll */
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(217deg, rgba(0, 179, 255, 0.8), rgba(255,0,0,0) 70.71%),
-  linear-gradient(127deg, rgba(255, 205, 152, 0.8), rgba(0,255,0,0) 70.71%),
-  linear-gradient(336deg, rgba(144, 79, 255, 0.8), rgba(0,0,255,0) 70.71%);
-  font-family: 'Roboto', sans-serif;
-  height: 100vh;
-}
-// body::-webkit-scrollbar {
-//   display: none;
-// }
-// @media (max-width: 420px) {
-//   body {
-//     height: auto;
-//   }
-// }
