@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
 
     if @booking.save
-      redirect_to offer_path(@offer)
+      redirect_to offer_path(@offer), notice: "You have booked this offer!"
     else
       render :new, status: :unprocessable_entity
     end
