@@ -1,21 +1,19 @@
+  <%= link_to "/", class: "navbar-brand" do %>
+    <%= image_tag "VTC_logo.png", class: "logo" %>
+  <% end %>
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "/", class: "navbar-brand" do %>
-      <%= image_tag "VTC_logo.png", class: "logo" %>
-    <% end %>
-    <p class="jingle">Rent a culture, save time and money to enjoy your next trip!</p>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <%= image_tag "lala.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <li class="nav-item dropdown">
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Go to offers", offers_path, class: "dropdown-item" %>
-              <%= link_to "Back to home", "/", class: "dropdown-item" %>
+              <%= link_to "Offers", offers_path, class: "dropdown-item" %>
+              <%= link_to "Home", "/", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
@@ -23,7 +21,7 @@
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
           </li class="nav-item" >
-          <%= link_to "Sign_up", new_user_registration_path, class: "nav-link" %>
+          <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
           <li>
 
           </li>
@@ -32,3 +30,4 @@
     </div>
   </div>
 </div>
+<p class="jingle">Rent a culture, save time and money to enjoy your next trip!</p>
