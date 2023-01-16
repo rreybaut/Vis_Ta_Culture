@@ -1,26 +1,29 @@
-<div class="container">
-  <%= simple_form_for offer do |f| %>
-    <%= f.input :country, as: :string %>
-    <%= f.input :city %>
-    <%= f.input :price %>
-    <br>
-    <h3>Choose your interests please :</h3>
-    <%= f.check_box :lodging %>
-    <%= f.label :lodging %>
-    <%= f.check_box :meal %>
-    <%= f.label :meal %>
-    <%= f.check_box :pet %>
-    <%= f.label :pet %>
-    <%= f.check_box :excursion %>
-    <%= f.label :excursion %>
-    <%= f.check_box :smoker %>
-    <%= f.label :smoker %>
-    <%= f.check_box :child %>
-    <%= f.label :child %>
-    <!-- app/views/articles/_form.html.erb -->
-    <%= f.input :photo, as: :file %>
-    <br>
-    <br>
-    <span><%= f.submit %></span>
-      <% end %>
+<div class="new-container">
+  <div class="new-offer">
+    <%= simple_form_for offer do |f| %>
+      <%= f.input :country, as: :string %>
+      <%= f.input :city %>
+      <%= f.input :price %>
+      <br>
+      <h3>Define options please</h3>
+      <%= f.check_box :lodging %>
+      <%= f.label :lodging %>
+      <%= f.check_box :meal %>
+      <%= f.label :meal %>
+      <%= f.check_box :pet %>
+      <%= f.label :pet %>
+      <%= f.check_box :excursion %>
+      <%= f.label :excursion %>
+      <%= f.check_box :smoker %>
+      <%= f.label :smoker %>
+      <%= f.check_box :child %>
+      <%= f.label :child %>
+      <!-- app/views/articles/_form.html.erb -->
+      <%= f.input :photo, as: :file %>
+      <br>
+      <br>
+      <%= f.submit "Save", class:"btn btn-flat"%><br>
+      <%= link_to "Back to Offers", offers_path, class:"btn btn-flat" %>
+    <% end %>
+  </div>
 </div>
