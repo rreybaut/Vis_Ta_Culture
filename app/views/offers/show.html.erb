@@ -66,7 +66,7 @@
   <div class="offer-btn-box">
     <%= link_to "Book", new_offer_booking_path(@offer), class: "btn btn-flat" %>
     <%= link_to "Modify", edit_offer_path(@offer), data: {turbo_method: :update}, class: "btn btn-flat" %>
-    <%= link_to "Delete", offer_path(@offer), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-flat" %>
+    <%# <%= link_to "Delete", offer_path(@offer), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-flat" %> %>
     <%= link_to "Back to Offers", offers_path, class: "btn btn-flat" %>
   </div>
   <div class="booking">
@@ -78,7 +78,7 @@
           <br>
           <%= booking.comment %>
           <br>
-          <%= link_to "delete", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?'}, class: "btn btn-flat" %>
+          <%# <%= link_to "delete", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?'}, class: "btn btn-flat" %> %>
         </li>
       <% end %>
     </ul>
