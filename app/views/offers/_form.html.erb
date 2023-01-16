@@ -22,9 +22,8 @@
       <%= f.input :photo, as: :file %>
       <br>
       <br>
-  </div>
-      <%= f.submit class:"btn btn-flat"%>
+      <%= f.submit "Save", class:"btn btn-flat"%><br>
+      <%= link_to "Back to Offers", offers_path, class:"btn btn-flat" %>
     <% end %>
-  <br>
-  <%= link_to "Back to index", offers_path, class:"btn btn-primary" %>
+  </div>
 </div>

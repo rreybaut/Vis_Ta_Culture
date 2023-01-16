@@ -13,9 +13,8 @@
       <%= f.input :comment, as: :text, label: false %>
       <br>
       <br>
-  </div>
-      <%= f.submit class:"btn btn-flat"%>
+      <%= f.submit "Save", class:"btn btn-flat"%><br>
+      <%= link_to "Back to Offer", offer_path(@offer), class:"btn btn-flat" %>
     <% end %>
-  <br>
-  <%= link_to "Back to index", offers_path, class:"btn btn-primary" %>
+  </div>
 </div>

@@ -7,26 +7,24 @@
   opacity: 0.6;
   transition: opacity 0.3s ease;
 }
-
 .btn-ghost:hover {
   opacity: 1;
 }
-
 .btn-flat {
+  width: 110px;
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
   background: #670BFF;
-  transition: background 0.3s ease;
+  transition: 0.3s ease;
   align-items: center;
   object-position: center;
 }
-
 .btn-flat:hover {
-  background: #4D04C4;
+  background: #e200d7;
   color: white;
 }
- .flex-new-btn {
-  display: flex;
-  justify-content: center;
- }
+.flex-new-btn {
+display: flex;
+justify-content: center;
+}
