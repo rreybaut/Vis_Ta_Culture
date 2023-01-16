@@ -6,68 +6,68 @@
   </div>
   <div class="interrest-box">
     <div class="interrest">
-      <p>Country</p><p><%= @offer.country %> </p>
+      <p>Country<br><%= @offer.country %></p>
     </div>
     <div class="interrest">
-      <p>City</p><p><%= @offer.city %> </p>
+      <p>City<br><%= @offer.city %></p>
     </div>
     <div class="interrest">
-      <p>Price</p><p><%= @offer.price %> $</p>
+      <p>Price<br><%= @offer.price %> $</p>
     </div>
     <div class="interrest">
-      <p>Lodging</p><p>
+      <p>Lodging<br>
       <% if @offer.lodging %>
         <i class="fa-solid fa-bed"></i>
       <% else %>
-        <p>No</p>
+        No
       <% end %> </p>
     </div>
     <div class="interrest">
-      <p>Meal<br>included</p><p> </i>
+      <p>Meal<br>included<br>
       <% if @offer.meal %>
         <i class="fa-solid fa-utensils"></i>
       <% else %>
-        <p>No</p>
+        No
       <% end %> </p>
     </div>
     <div class="interrest">
-      <p>Children<br>welcome</p><p>
+      <p>Children<br>welcome<br>
       <% if @offer.pet %>
         <i class="fa-solid fa-paw"></i>
       <% else %>
-        <p>No</p>
+        No
       <% end %> </p>
     </div>
     <div class="interrest">
-      <p>Pets<br>welcome</p><p>
+      <p>Pets<br>welcome<br>
       <% if @offer.pet %>
         <i class="fa-solid fa-paw"></i>
       <% else %>
-        <p>No</p>
+        No
       <% end %> </p>
     </div>
     <div class="interrest">
-      <p>Smokers<br>welcome</p><p>
+      <p>Smokers<br>welcome<br>
       <% if @offer.smoker  %>
         <i class="fa-solid fa-smoking"></i>
       <% else %>
-        <p>No</p>
+        No
       <% end %> </p>
     </div>
     <div class="interrest">
-      <p>Excursion</p><p>
+      <p>Excursion<br>
       <% if @offer.excursion %>
         <i class="fa-solid fa-cable-car"></i>
       <% else %>
-        <p>No</p>
+        No
       <% end %> </p>
     </div>
   </div>
   <div class="offer-btn-box">
-    <%= link_to "Booking", new_offer_booking_path(@offer), class: "btn btn-primary" %>
-    <%= link_to "Back to index", offers_path, class: "btn btn-primary" %>
-    <%= link_to "Update", edit_offer_path(@offer), data: {turbo_method: :update}, class: "btn btn-primary" %>
-    <%= link_to "Delete", offer_path(@offer), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-danger" %>
+    <%= link_to "Book", new_offer_booking_path(@offer), class: "btn btn-flat" %>
+    <%= link_to "Modify", edit_offer_path(@offer), data: {turbo_method: :update}, class: "btn btn-flat" %>
+    <%= link_to "Delete", offer_path(@offer), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-flat" %>
+    <%= link_to "Back to Offers", offers_path, class: "btn btn-flat" %>
   </div>
   <div class="booking">
     <ul>
