@@ -2,12 +2,12 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: %i[new create]
 
   def new
-    @offer = Offer.find(params[:offer_id])
+    # @offer = Offer.find(params[:offer_id])
     @booking = Booking.new
   end
 
   def create
-    @offer = Offer.find(params[:offer_id])
+    # @offer = Offer.find(params[:offer_id])
     @booking = Booking.new(booking_params)
     @booking.offer = @offer
     @booking.user = current_user
