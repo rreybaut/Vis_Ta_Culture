@@ -78,7 +78,7 @@
           <br>
           <%= booking.comment %>
           <br>
-          <%= link_to "delete", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?'}  %>
+          <%= link_to "delete", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?'}, class: "btn btn-flat" %>
         </li>
       <% end %>
     </ul>
