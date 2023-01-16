@@ -31,11 +31,11 @@ class OffersController < ApplicationController
     redirect_to offer_path(@offer)
   end
 
-  # def destroy
-  #   @offer.destroy
-  #   # rediriger vers l'index des offres
-  #   redirect_to offers_path, notice: "Offer was successfully destroyed."
-  # end
+  def destroy
+    @offer.destroy
+    # rediriger vers l'index des offres
+    redirect_to offers_path, notice: "Offer was successfully destroyed."
+  end
 
   private
 
