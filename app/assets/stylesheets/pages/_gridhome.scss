@@ -1,0 +1,28 @@
+.gridhome {
+  // background-image: asset-url(accueil_bg.webp);
+  text-align: center;
+  height: 100vh;
+  grid-gap: 8px;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.6fr 3fr 1fr 0.4fr;
+  grid-template-areas:
+      "navbar navbar navbar"
+      "main . call2action"
+      ". . ."
+      "footer footer footer";
+}
+nav {
+  grid-area: navbar;
+}
+main {
+  grid-area: main;
+}
+#call2agrid {
+  grid-area: call2action;
+}
+footer {
+  grid-area: footer;
+  color: $white;
+  background-color: $purple;
+}
