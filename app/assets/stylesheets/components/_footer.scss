@@ -1,0 +1,11 @@
+footer {
+  background: linear-gradient(90deg, #6f00ff00, #6f00ff, #c200ff, #ff00cc, #ff00cc00 100%);
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  h5 {
+    color: $white;
+    font-weight: 100;
+  }
+}

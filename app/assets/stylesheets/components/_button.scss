@@ -38,3 +38,26 @@ justify-content: center;
   color: $purple;
   background: $acid;
 }
+.btn-book {
+  width: 110px;
+  padding: 8px 24px;
+  color: $white;
+  background: $green;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+.btn-book:hover {
+  color: $purple;
+  background: $acid;
+}
+.btn-booknow {
+  color: $white;
+  background: $green;
+  width: max-content;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+.btn-booknow:hover {
+  color: $purple;
+  background: $acid;
+}

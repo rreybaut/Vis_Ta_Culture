@@ -1,7 +1,9 @@
 <div class="gridshow">
+  <%= render "shared/navbar" %>
+
   <div class="offer-pix">
     <% if @offer.photo.attached? %>
-      <%= cl_image_tag @offer.photo.key, height: 350, width: 450, crop: :fill, class: "image" %>
+      <%= cl_image_tag @offer.photo.key, height: 350, width: 450, crop: :fill, class: "show-img" %>
     <% end %>
   </div>
   <div class="interrest-box">
@@ -64,10 +66,10 @@
     </div>
   </div>
   <div class="offer-btn-box">
-    <%= link_to "Book", new_offer_booking_path(@offer), class: "btn btn-flat" %>
+    <%= link_to "Book", new_offer_booking_path(@offer), class: "btn btn-book" %>
     <%= link_to "Modify", edit_offer_path(@offer), data: {turbo_method: :update}, class: "btn btn-flat" %>
     <%= link_to "Delete", offer_path(@offer), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-flat" %>
-    <%= link_to "Back to Offers", offers_path, class: "btn btn-flat" %>
+    <%= link_to "< Offers", offers_path, class: "btn btn-book" %>
   </div>
   <div class="booking">
     <ul>
@@ -84,4 +86,6 @@
     </ul>
   </div>
   <div class="btn-group" role="group" aria-label="Basic example"></div>
+
+  <%= render "shared/footer" %>
 </div>

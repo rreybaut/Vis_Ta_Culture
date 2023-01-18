@@ -34,7 +34,7 @@ class OffersController < ApplicationController
   def destroy
     @offer.destroy
     # rediriger vers l'index des offres
-    redirect_to offers_path, notice: "Offer was successfully destroyed."
+    redirect_to offers_path, notice: "Offer was successfully deleted."
   end
 
   private
