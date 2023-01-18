@@ -1,7 +1,7 @@
 <div class="gridshow">
   <div class="offer-pix">
     <% if @offer.photo.attached? %>
-      <%= cl_image_tag @offer.photo.key, height: 350, width: 450, crop: :fill, class: "image" %>
+      <%= cl_image_tag @offer.photo.key, height: 350, width: 450, crop: :fill, class: "show-img" %>
     <% end %>
   </div>
   <div class="interrest-box">

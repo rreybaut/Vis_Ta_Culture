@@ -1,24 +1,44 @@
-.card {
-  border: 2px ridge rgba(244, 234, 234, 0.103);
-  background-color: rgba(238, 241, 243, 0.142);
-  padding: 0.5rem;
-  flex-direction: column;
-  border-radius: 10px;
-  margin-bottom: 8px;
-  margin-top: 8px;
-}
-.parent {
+.cards-offers {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 12px;
+}
+.card-trip {
+  display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  img {
+    height: 240px;
+    object-fit: cover;
   }
-.div1 {
-  grid-area: 1 / 1 / 5 / 3;
+  .capitale {
+    color: $purple;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+  }
 }
-.card p {
-  // font: small-caps bold 1rem sans-serif;
-  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
-  text-align: center;
+.card-trip-infos {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
+.trip-details {
+  display: flex;
+  gap: 4px;
+}
+.ville-pays {
+  display: flex;
+  gap: 8px;
+}
+.card-price {
+color: $purple;}

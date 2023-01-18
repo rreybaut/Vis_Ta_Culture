@@ -1,10 +1,9 @@
-.gridhome {
+.gridoffers {
   height: 100vh;
-  background-image: asset-url("accueil_bg.webp");
+  background-image: asset-url("accueil_bg_33.webp");
   background-position: center;
   background-size: cover;
   text-align: center;
-  font-size: 1.4em;
   display: grid;
   grid-gap: 8px;
   grid-template-columns: 40px 1fr 1fr 1fr 40px;
@@ -20,33 +19,15 @@ nav {
   grid-area: navbar;
   margin-bottom: 20px;
 }
-main {
-  grid-area: main;
-  text-shadow: #0072b7 1px 0 20px;
-  color: $white;
-  font-weight: 300;
+.create-offer-btn {
+  grid-area: offer-btn;
 }
-.jingle {
-  color: $white;
-  font-weight: 100;
-  background-color: #00b5d1cf;
-  padding: 8px 12px;
-  }
-#call2grid {
-  grid-area: call2;
-  h1 {
-    color: $white;
-    font-size: 48px;
-    font-weight: lighter;
-    text-align: center;
-  }
-}
-footer {
-  grid-area: footer;
+.cards-offers {
+  grid-area: cards;
 }
 @media screen and (max-width: 550px){
   .gridhome {
-    font-size: 1.3em;
+    height: 100vh;
     display: grid;
     grid-gap: 8px;
     grid-template-columns: 8px 1fr 8px;
@@ -61,17 +42,5 @@ footer {
   }
   nav {
     margin-bottom: 40px;
-  }
-  main {
-    text-align: center;
-    background-color: #00b5d1cf;
-    padding: 12px 12px 0;
-  }
-  #call2grid {
-    grid-area: call2;
-    line-height: 1.3em;
-  }
-  h1 {
-    text-shadow: #0072b7 1px 0 14px;
   }
 }

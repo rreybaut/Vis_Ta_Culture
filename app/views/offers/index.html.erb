@@ -1,37 +1,25 @@
-<div class="container index-container">
-  <br>
-  <div class="flex-new-btn">
-    <%= link_to "Create an offer", new_offer_path, class: "btn btn-flat" %>
+<div class=gridoffers>
+  <%= render "shared/navbar" %>
+  <div class="create-offer-btn">
+  <%= link_to "Create your Offer", new_offer_path, class: "btn btn-call2" %>
   </div>
-  <br>
-  <ul class="cards-index">
+  <ul class="cards-offers">
     <% @offers.each do |offer|  %>
-      <% if offer.city == "Buenos Aires" %>
-        <% image = "buenos-aires.jpg" %>
-        <% elsif offer.city == "Dublin"%>
-        <% image = "dublin2.jpg" %>
-        <% elsif offer.city == "Casablanca"%>
-        <% image = "casablanca2.jpg" %>
-        <% elsif offer.city == "Paris"%>
-        <% image = "paris.jpg" %>
-        <% elsif offer.city == "Dakar"%>
-        <% image = "dakar.jpg" %>
-        <% else %>
-        <% image = "newyork.jpg" %>
-      <% end %>
       <li>
-        <%= link_to offer_path(offer) do %>
           <div class="card-trip">
-            <%= image_tag image %>
+            <%= cl_image_tag offer.photo.key, height: 350, width: 450, crop: :fill, class: "image" %>
             <div class="card-trip-infos">
-              <h2><%= offer.city %> - <%= offer.country %></h2>
-            </div>
-            <div>
-              <h2 class="card-trip-pricing">$<%= offer.price %></h2>
+              <div class="trip-details">
+                  <p class="capitale"><%= offer.city %>,</p><p><%= offer.country %></p>
+                <p class="card-price"><strong>•</strong></p>
+                <p><em>price/day:</em></p>
+                <p class="card-price">$<strong><%= offer.price %></strong></p>
+              </div>
+              <%= link_to "Book now", offer_path(offer), class: "btn btn-booknow" %>
             </div>
           </div>
-        <% end %>
       </li>
     <% end  %>
   </ul>
+  <%= render "shared/footer" %>
 </div>
