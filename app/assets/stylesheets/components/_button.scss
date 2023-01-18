@@ -12,19 +12,29 @@
 }
 .btn-flat {
   width: 110px;
-  color: white;
+  color: $white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #670BFF;
+  background: $purple;
   transition: 0.3s ease;
-  align-items: center;
-  object-position: center;
 }
 .btn-flat:hover {
-  background: #e200d7;
-  color: white;
+  background: $pink;
+  color: $white;
 }
 .flex-new-btn {
 display: flex;
 justify-content: center;
+}
+.btn-call2 {
+  color: $white;
+  background: $pink;
+  width: max-content;
+  padding: 8px 24px;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+.btn-call2:hover {
+  color: $purple;
+  background: $acid;
 }
