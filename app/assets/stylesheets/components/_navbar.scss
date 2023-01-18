@@ -1,7 +1,7 @@
 .navbar-lewagon {
   z-index: 1;
-  width: -webkit-fill-available;
-  height: 56px;
+  // width: -webkit-fill-available;
+  // height: 56px;
   justify-content: space-between;
   background: linear-gradient(90deg, rgb(111, 0, 255), rgb(255, 0, 204) 100%);
 }
@@ -10,11 +10,6 @@
 }
 .navbar-lewagon .navbar-brand img {
   width: 200px;
-}
-.logo {
-  position: absolute;
-  left: -30px;
-  top: -10px;
 }
 .menu-pos {
   position: relative;
@@ -34,11 +29,6 @@
   text-align: right;
   border-radius: 6px;
   margin-top: 12px !important;
-}
-.jingle {
-  color: #ffffffa8;
-  font-size: 1.2em;
-  margin: 0;
 }
 .index-container {
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
