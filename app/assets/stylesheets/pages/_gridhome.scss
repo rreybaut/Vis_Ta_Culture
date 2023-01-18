@@ -8,14 +8,13 @@
   display: grid;
   grid-gap: 8px;
   grid-template-columns: 40px 1fr 1fr 1fr 40px;
-    grid-template-rows: 68px 40px 1fr 80px 40px 40px;
+    grid-template-rows: 68px 40px 1fr 80px 40px;
     grid-template-areas:
         "navbar navbar navbar navbar navbar"
         ". . . . ."
         ". main . call2 ."
         ". . . . ."
-        ". footer footer footer ."
-        ". . . . .";
+        ". footer footer footer .";
 }
 nav {
   grid-area: navbar;
@@ -31,7 +30,6 @@ main {
   color: $white;
   font-weight: 100;
   background-color: #00b5d1cf;
-  border-radius: 8px;
   padding: 8px 12px;
   }
 #call2grid {
@@ -45,43 +43,42 @@ main {
 }
 footer {
   grid-area: footer;
-  background: linear-gradient(90deg, #e4a12600, #e4a126, #e4a12600);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  h5 {
-    color: $white;
-    font-weight: 100;
-  }
+  // background: linear-gradient(90deg, #ff0082, #e4a126);
+  // display: flex;
+  // justify-content: center;
+  // align-items: flex-end;
+  // h5 {
+  //   color: $white;
+  //   font-weight: 100;
+  // }
 }
 @media screen and (max-width: 550px){
   .gridhome {
     height: 100vh;
     background-image: asset-url("accueil_bg.webp");
     background-position: bottom;
-    background-size: 180vw;
-    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
     font-size: 1.3em;
     display: grid;
     grid-gap: 8px;
     grid-template-columns: 8px 1fr 8px;
-    grid-template-rows: 110px 0.3fr 1fr 8px 40px 8px;
+    grid-template-rows: 110px 0.5fr 1fr 0fr 8px 40px;
     grid-template-areas:
-    "navbar navbar navbar"
-    ". main ."
-    ". call2 ."
-    ". . ."
-    ". footer ."
-    ". . .";
+      "navbar navbar navbar"
+      ". . ."
+      ". call2 ."
+      ". main ."
+      ". . ."
+      ". footer .";
   }
   nav {
     margin-bottom: 40px;
   }
   main {
-    line-height: 1.3em;
     text-align: center;
+    background-color: #00b5d1cf;
+    padding: 12px 12px 0;
   }
   #call2grid {
     grid-area: call2;
