@@ -32,7 +32,7 @@ nav {
   gap: 12px;
 }
 @media screen and (max-width: 550px){
-  .gridhome {
+  .gridbooking {
     height: 100vh;
     display: grid;
     grid-gap: 8px;
@@ -45,6 +45,9 @@ nav {
       "cards"
       "."
       "footer";
+  }
+  nav {
+    margin-bottom: 40px;
   }
   .card-trip {
     width: 90vw;

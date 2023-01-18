@@ -1,4 +1,6 @@
-<div class="new-container">
+<div class=gridbooking>
+  <%= render "shared/navbar" %>
+
   <h1>Book your offer</h1>
 
   <div class="new-offer">
@@ -13,8 +15,10 @@
       <%= f.input :comment, as: :text, label: false %>
       <br>
       <br>
-      <%= f.submit "Save", class:"btn btn-flat"%><br>
-      <%= link_to "Back to Offer", offer_path(@offer), class:"btn btn-flat" %>
+      <%= f.submit "Save", class:"btn btn-flat"%><br><br>
+      <%= link_to "< Offers", offers_path, class: "btn btn-book" %>
     <% end %>
   </div>
+
+  <%= render "shared/footer" %>
 </div>
