@@ -1,32 +1,29 @@
 .gridshow {
   height: 100vh;
-  grid-gap: 10px;
   display: grid;
+  justify-items: center;
+  grid-gap: 8px;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 68px auto 1fr 1fr  40px;
+  grid-template-rows: 48px 40px auto 6fr 1fr 40px;
   grid-template-areas:
-    "navbar navbar"
-    "pix interrest"
-    "btn btn"
-    "booking booking"
-    "footer footer"
-    ;
-  justify-content: center;
+      "navbar navbar"
+      ". ."
+      "pix interrest"
+      "btn ."
+      "booking booking"
+      "footer footer";
 }
 nav {
   grid-area: navbar;
-  margin-bottom: 20px;
 }
 .offer-pix {
   grid-area: pix;
 }
 .interrest-box {
-  width: fit-content;
-  height: fit-content;
-  grid-template-rows: 1fr 1fr 1fr;
   grid-area: interrest;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-auto-rows: minmax(100px, auto);
   grid-gap: 4px;
 }
@@ -35,16 +32,26 @@ nav {
 }
 .booking {
   grid-area: booking;
-
-  position: relative;
-  top: -40px;
-  left: -5px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
 }
+//responsive tablettes
+@media screen and (max-width: 550px){
+  .gridshow {
+    height: 100vh;
+    grid-gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 48px 40px 1fr 1fr 1fr 40px;
+    grid-template-areas:
+        "navbar navbar"
+        ". ."
+        "pix interrest"
+        "btn ."
+        "booking booking"
+        "footer footer";
+    justify-items: center;
+  }
+}
+//responsive smartphones
 @media screen and (max-width: 550px){
   .gridshow {
     height: 100vh;
@@ -60,11 +67,5 @@ nav {
       "booking"
       "footer"
       ;
-  }
-  nav {
-    margin-bottom: 40px;
-  }
-  .offer-pix {
-    width: 300px;
   }
 }
