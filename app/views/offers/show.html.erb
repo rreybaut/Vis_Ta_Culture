@@ -66,10 +66,10 @@
     </div>
   </div>
   <div class="offer-btn-box">
-    <%= link_to "Book", new_offer_booking_path(@offer), class: "btn btn-book" %>
+    <%= link_to "< Offers", offers_path, class: "btn btn-book" %>
     <%= link_to "Modify", edit_offer_path(@offer), data: {turbo_method: :update}, class: "btn btn-flat" %>
     <%= link_to "Delete", offer_path(@offer), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-flat" %>
-    <%= link_to "< Offers", offers_path, class: "btn btn-book" %>
+    <%= link_to "Book", new_offer_booking_path(@offer), class: "btn btn-book" %>
   </div>
   <div class="booking">
     <ul>
@@ -85,7 +85,6 @@
       <% end %>
     </ul>
   </div>
-  <div class="btn-group" role="group" aria-label="Basic example"></div>
 
   <%= render "shared/footer" %>
 </div>

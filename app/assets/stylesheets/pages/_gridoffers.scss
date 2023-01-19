@@ -5,6 +5,7 @@
   background-size: cover;
   text-align: center;
   display: grid;
+  justify-items: center;
   grid-gap: 8px;
   grid-template-columns: 1fr 1fr 1fr ;
     grid-template-rows: 68px 40px 1fr auto 40px;
