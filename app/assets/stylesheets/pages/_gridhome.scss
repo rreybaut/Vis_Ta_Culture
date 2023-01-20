@@ -6,6 +6,7 @@
   text-align: center;
   font-size: 1.4em;
   display: grid;
+  align-items: start;
   justify-items: center;
   grid-gap: 8px;
   grid-template-columns: 40px 1fr 1fr 1fr 40px;
@@ -23,15 +24,18 @@ nav {
 }
 main {
   grid-area: main;
-  text-shadow: #0072b7 1px 0 20px;
   color: $white;
   font-weight: 300;
+  h1 {
+    text-shadow: #0072b78c 1px 0 14px;
+  }
 }
 .jingle {
   color: $white;
   font-weight: 100;
-  background-color: #00b5d1cf;
+  background: linear-gradient(90deg, #00b5d1cf, #00b5d184 100%);
   padding: 8px 12px;
+  border-radius: 8px;
   }
 #call2grid {
   grid-area: call2;
@@ -45,34 +49,51 @@ main {
 footer {
   grid-area: footer;
 }
+@media screen and (max-width: 1150px){
+  .gridhome {
+    background-position-y: -40px;
+    grid-template-columns: 8px 1fr 10% 1fr 8px;
+    grid-template-rows: 56px 20% 1fr 40px;
+    grid-template-areas:
+        "navbar navbar navbar navbar navbar"
+        ". . . . ."
+        ". main . call2."
+        ". footer footer footer.";
+  }
+  main {
+    background: linear-gradient(90deg, #00b5d1cf, #00b5d184 100%);
+    padding: 8px 12px;
+    border-radius: 8px;
+  }
+}
 @media screen and (max-width: 550px){
   .gridhome {
     font-size: 1.3em;
+    background-image: asset-url("accueil_bg_sd.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 56px;
+    background-size: unset;
     display: grid;
     grid-gap: 8px;
     grid-template-columns: 8px 1fr 8px;
-    grid-template-rows: 110px 0.5fr 1fr 0fr 8px 40px;
+    grid-template-rows: 56px 200px auto auto 40px;
     grid-template-areas:
-      "navbar navbar navbar"
-      ". . ."
-      ". call2 ."
-      ". main ."
-      ". . ."
-      ". footer .";
+        "navbar navbar navbar"
+        ". . ."
+        ". call2 ."
+        ". main ."
+        ". footer .";
   }
   nav {
     margin-bottom: 40px;
   }
   main {
     text-align: center;
-    background-color: #00b5d1cf;
     padding: 12px 12px 0;
   }
   #call2grid {
     grid-area: call2;
     line-height: 1.3em;
-  }
-  h1 {
-    text-shadow: #0072b7 1px 0 14px;
   }
 }
