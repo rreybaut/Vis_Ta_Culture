@@ -5,7 +5,7 @@
     <% if user_signed_in? %>
       <ul class="menu">
         <li>
-          <div class="navig">MENU</div>
+          <div class="navig"><a href="#" class="nav-link">Menu</a></div>
           <ul class="sub-menu">
             <li><%= link_to "Homepage", "/", class: "dropdown-item" %></li>
             <li><%= link_to "Offers", offers_path, class: "dropdown-item" %></li>
