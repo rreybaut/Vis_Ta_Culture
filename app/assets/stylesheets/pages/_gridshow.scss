@@ -1,4 +1,5 @@
 .show {
+  height: 100vh;
   grid-template-rows: 56px 5% auto 6fr 1fr 40px;
   grid-template-areas:
     "navbar navbar navbar navbar navbar"
