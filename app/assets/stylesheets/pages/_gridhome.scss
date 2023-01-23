@@ -37,10 +37,10 @@ main {
     background-position-y: -40px;
     grid-template-rows: 56px 5% 1fr 40px;
     grid-template-areas:
-        "navbar navbar navbar navbar navbar"
-        ". . . . ."
-        ". main . call2."
-        ". footer footer footer.";
+      "navbar navbar navbar navbar navbar"
+      ". . . . ."
+      ". main . call2."
+      ". footer footer footer.";
   }
   main {
     background: linear-gradient(90deg, #00b5d1cf, #00b5d184 100%);
@@ -59,11 +59,11 @@ main {
     background-size: unset;
     grid-template-rows: 56px 200px 2fr 3fr 40px;
     grid-template-areas:
-        "navbar navbar navbar"
-        ". . ."
-        ". call2 ."
-        ". main ."
-        ". footer .";
+      "navbar navbar navbar"
+      ". . ."
+      ". call2 ."
+      ". main ."
+      ". footer .";
   }
   main {
     text-align: center;
