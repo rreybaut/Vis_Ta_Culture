@@ -4,23 +4,27 @@
   background-size: cover;
   grid-template-rows: 56px 5% 1fr 80px 40px;
   grid-template-areas:
-      "navbar navbar navbar navbar navbar"
-      ". . . . ."
-      ". main . call2 ."
-      ". . . . ."
-      ". footer footer footer .";
+    "navbar navbar navbar navbar navbar"
+    ". . . . ."
+    ". main . call2 ."
+    ". . . . ."
+    ". footer footer footer .";
 }
 main {
   grid-area: main;
   color: $white;
   text-shadow: #0072b78c 1px 0 14px;
-}
-.jingle {
-  color: $white;
   background: linear-gradient(90deg, #00b5d1cf, #00b5d184 100%);
   padding: 8px 12px;
   border-radius: 8px;
-  }
+}
+.jingle {
+  color: $white;
+  text-shadow: #0072b78c 1px 0 14px;
+  background: linear-gradient(90deg, #00b5d1cf, #00b5d184 100%);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
 #call2grid {
   grid-area: call2;
   h1 {
@@ -41,11 +45,6 @@ main {
       ". . . . ."
       ". main . call2."
       ". footer footer footer.";
-  }
-  main {
-    background: linear-gradient(90deg, #00b5d1cf, #00b5d184 100%);
-    padding: 8px 12px;
-    border-radius: 8px;
   }
 }
 // SD
@@ -70,8 +69,6 @@ main {
     padding: 12px 12px 0;
   }
   #call2grid {
-    grid-area: call2;
-    // line-height: 1.3em;
     h1 {
       font-size: 3rem;
       line-height: 3rem;
