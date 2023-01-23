@@ -18,13 +18,6 @@ main {
   padding: 8px 12px;
   border-radius: 8px;
 }
-.jingle {
-  color: $white;
-  text-shadow: #0072b78c 1px 0 14px;
-  background: linear-gradient(90deg, #00b5d1cf, #00b5d184 100%);
-  padding: 8px 12px;
-  border-radius: 8px;
-}
 #call2grid {
   grid-area: call2;
   h1 {
@@ -34,19 +27,26 @@ main {
     text-align: center;
     text-shadow: #0072b78c 1px 0 14px;
   }
-}
-// TABS
-@media screen and (max-width: 1150px){
-  .home {
-    background-position-y: -40px;
-    grid-template-rows: 56px 5% 1fr 40px;
-    grid-template-areas:
-      "navbar navbar navbar navbar navbar"
-      ". . . . ."
-      ". main . call2."
-      ". footer footer footer.";
+  .jingle {
+    color: $white;
+    text-shadow: #0072b78c 1px 0 14px;
+    background: linear-gradient(90deg, #00b5d1cf, #00b5d184 100%);
+    padding: 8px 12px;
+    border-radius: 8px;
   }
 }
+// // TABS
+// @media screen and (max-width: 1150px){
+//   .home {
+//     background-position-y: -40px;
+//     grid-template-rows: 56px 5% 1fr 40px;
+//     grid-template-areas:
+//       "navbar navbar navbar navbar navbar"
+//       ". . . . ."
+//       ". main . call2."
+//       ". footer footer footer.";
+//   }
+// }
 // SD
 @media screen and (max-width: 550px){
   .home {
@@ -57,12 +57,12 @@ main {
     background-position-y: 56px;
     background-size: unset;
     grid-template-rows: 56px 200px 2fr 3fr 40px;
-    grid-template-areas:
-      "navbar navbar navbar"
-      ". . ."
-      ". call2 ."
-      ". main ."
-      ". footer .";
+      grid-template-areas:
+        "navbar navbar navbar"
+        ". . ."
+        ". call2 ."
+        ". main ."
+        ". footer .";
   }
   main {
     text-align: center;

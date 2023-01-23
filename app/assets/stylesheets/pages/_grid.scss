@@ -18,11 +18,11 @@ footer {
   grid-area: footer;
 }
 // TABS
-@media screen and (max-width: 1150px){
-  .grid {
-    grid-template-columns: 1fr 3fr 1fr 3fr 1fr;
-  }
-}
+// @media screen and (max-width: 1150px){
+//   .grid {
+//     grid-template-columns: 1fr 3fr 1fr 3fr 1fr;
+//   }
+// }
 // SD
 @media screen and (max-width: 550px){
   .grid {
