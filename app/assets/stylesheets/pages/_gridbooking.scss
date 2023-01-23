@@ -1,14 +1,8 @@
-.gridoffers {
-  height: 100vh;
+.booking {
   background-image: asset-url("accueil_bg_33.webp");
   background-position: center;
   background-size: cover;
-  text-align: center;
-  display: grid;
-  justify-items: center;
-  grid-gap: 8px;
-  grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 68px 40px 1fr auto 40px;
+    // grid-template-rows: 68px 5% 1fr auto 40px;
     grid-template-areas:
         " navbar navbar navbar "
         ". . ."
@@ -16,10 +10,6 @@
         "cards cards cards"
         ". . . "
         "footer footer footer ";
-}
-nav {
-  grid-area: navbar;
-  margin-bottom: 20px;
 }
 .create-offer-btn {
   grid-area: btn;
@@ -33,12 +23,8 @@ nav {
   gap: 12px;
 }
 @media screen and (max-width: 550px){
-  .gridbooking {
-    height: 100vh;
-    display: grid;
-    grid-gap: 8px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 110px 0.5fr 1fr auto 8px 40px;
+  .booking {
+    // grid-template-rows: 110px 5% 1fr auto 8px 40px;
     grid-template-areas:
       "navbar"
       "."
@@ -47,14 +33,10 @@ nav {
       "."
       "footer";
   }
-  nav {
-    margin-bottom: 40px;
-  }
   .card-trip {
     width: 90vw;
   }
   .cards-offers {
     grid-area: cards;
-    grid-template-columns: 1fr;
   }
 }

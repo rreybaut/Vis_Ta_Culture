@@ -1,99 +1,76 @@
-.gridhome {
-  height: 100vh;
+.home {
   background-image: asset-url("accueil_bg.webp");
   background-position: center;
   background-size: cover;
-  text-align: center;
-  font-size: 1.4em;
-  display: grid;
-  align-items: start;
-  justify-items: center;
-  grid-gap: 8px;
-  grid-template-columns: 40px 1fr 1fr 1fr 40px;
-    grid-template-rows: 68px 40px 1fr 80px 40px;
-    grid-template-areas:
-        "navbar navbar navbar navbar navbar"
-        ". . . . ."
-        ". main . call2 ."
-        ". . . . ."
-        ". footer footer footer .";
-}
-nav {
-  grid-area: navbar;
-  margin-bottom: 20px;
+  grid-template-rows: 56px 5% 1fr 80px 40px;
+  grid-template-areas:
+    "navbar navbar navbar navbar navbar"
+    ". . . . ."
+    ". main . call2 ."
+    ". . . . ."
+    ". footer footer footer .";
 }
 main {
   grid-area: main;
   color: $white;
-  font-weight: 300;
-  h1 {
-    text-shadow: #0072b78c 1px 0 14px;
-  }
-}
-.jingle {
-  color: $white;
-  font-weight: 100;
-  background: linear-gradient(90deg, #00b5d1cf, #00b5d184 100%);
+  text-shadow: #005e67 0 0 8px;
+    background: linear-gradient(90deg, #00b5d1de, #00b5d1d1 100%);
   padding: 8px 12px;
   border-radius: 8px;
-  }
+}
 #call2grid {
   grid-area: call2;
   h1 {
     color: $white;
-    font-size: 48px;
-    font-weight: lighter;
+    font-size: 4rem;
+    line-height: 4rem;
     text-align: center;
+    text-shadow: #0072b78c 1px 0 14px;
   }
-}
-footer {
-  grid-area: footer;
-}
-@media screen and (max-width: 1150px){
-  .gridhome {
-    background-position-y: -40px;
-    grid-template-columns: 8px 1fr 10% 1fr 8px;
-    grid-template-rows: 56px 20% 1fr 40px;
-    grid-template-areas:
-        "navbar navbar navbar navbar navbar"
-        ". . . . ."
-        ". main . call2."
-        ". footer footer footer.";
-  }
-  main {
-    background: linear-gradient(90deg, #00b5d1cf, #00b5d184 100%);
+  .jingle {
+    color: $white;
+    text-shadow: #005e67 0 0 8px;
+    background: linear-gradient(90deg, #00b5d1de, #00b5d1d1 100%);
     padding: 8px 12px;
     border-radius: 8px;
   }
 }
+// // TABS
+@media screen and (max-width: 1150px){
+  .home {
+    grid-template-rows: 56px 5% 1fr 40px;
+    grid-template-areas:
+      "navbar navbar navbar navbar navbar"
+      ". . . . ."
+      ". main . call2."
+      ". footer footer footer.";
+  }
+}
+// SD
 @media screen and (max-width: 550px){
-  .gridhome {
+  .home {
     font-size: 1.3em;
     background-image: asset-url("accueil_bg_sd.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-position-y: 56px;
     background-size: unset;
-    display: grid;
-    grid-gap: 8px;
-    grid-template-columns: 8px 1fr 8px;
-    grid-template-rows: 56px 200px auto auto 40px;
-    grid-template-areas:
+    grid-template-rows: 56px 232px 2fr 3fr 40px;
+      grid-template-areas:
         "navbar navbar navbar"
         ". . ."
         ". call2 ."
         ". main ."
         ". footer .";
   }
-  nav {
-    margin-bottom: 40px;
-  }
   main {
     text-align: center;
     padding: 12px 12px 0;
   }
   #call2grid {
-    grid-area: call2;
-    line-height: 1.3em;
+    h1 {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
   }
 }
