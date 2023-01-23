@@ -4,17 +4,18 @@
   overflow: hidden;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px rgba(0, 83, 126, 0.2);
   img {
     height: 240px;
     object-fit: cover;
   }
   .capitale {
     color: $purple;
-    font-weight: bold;
+    font-weight: bold !important;
     text-transform: uppercase;
   }
   p {
+    font-weight: 400 !important;
     font-size: 16px;
     text-align: center;
     text-decoration: none;
@@ -23,8 +24,9 @@
 .card-trip-infos {
   padding: 12px;
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .trip-details {
   display: flex;
@@ -35,4 +37,5 @@
   gap: 8px;
 }
 .card-price {
-color: $purple;}
+  color: $purple;
+}

@@ -3,3 +3,10 @@
   left: 0px;
   top: -40px;
 }
+@media screen and (max-width: 550px){
+  .logo {
+    position: absolute;
+    left: -40px;
+    top: -40px;
+  }
+}

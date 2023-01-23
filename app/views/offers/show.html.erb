@@ -71,7 +71,7 @@
     <%= link_to "Delete", offer_path(@offer), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-flat" %>
     <%= link_to "< Offers", offers_path, class: "btn btn-book" %>
   </div>
-  <div class="booking">
+  <div class="book">
     <ul>
       <% @offer.bookings.each do |booking| %>
         <h3>Your booking</h3>
