@@ -1,8 +1,12 @@
-<div class="container new-container">
-  <h1>Create your offer</h1>
+<div class="booking">
+  <%= render "shared/navbar" %>
+  <div class="titlebook">
+    <h1>Create your offer</h1>
+  </div>
 
-  <%= render "form", offer: @offer %>
+  <div class="formbook">
+    <%= render "form", offer: @offer %>
+  </div>
 
-  <%= link_to "< Offers", offers_path, class: "btn btn-book" %>
-
+  <%= render "shared/footer" %>
 </div>
