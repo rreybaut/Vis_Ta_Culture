@@ -1,2 +1,9 @@
-<%= render "form", offer: @offer %>
-<%= link_to "< Offer", offer_path(@offer), class: "btn btn-book" %>
+<div class="fcreate">
+  <%= render "shared/navbar" %>
+
+  <h1 class="lighttitle">Modify your offer</h1>
+  <%= render "form", offer: @offer %>
+  <%= link_to "< Offer", offer_path(@offer), class: "btn btn-book" %>
+
+  <%= render "shared/footer" %>
+</div>

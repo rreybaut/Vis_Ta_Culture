@@ -1,15 +1,48 @@
 .show {
-  // grid-template-rows: 56px 5% auto 6fr 1fr 40px;
-  grid-template-areas:
+  grid-column-gap: 20px;
+    grid-template-areas:
     "navbar navbar navbar navbar navbar"
-    ". . . . ."
-    ". pix . interrest ."
-    ". btn btn . ."
-    ". booking booking booking ."
+    ". title title . ."
+    ". pix interrest booking ."
+    ". btn . . ."
     ". footer footer footer .";
+}
+.titleshow {
+  grid-area: title;
+  height: 0px;
+  gap: 0.5rem;
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+  h2 {
+    font-weight: 100;
+  }
+  h3 {
+    color: $purple;
+    font-weight: 400;
+  }
+  .bold {
+    color: $purple;
+    font-weight: bold;
+  }
+  .priceshow {
+    display: flex;
+    align-items: baseline;
+    .gapprice {
+      gap: 0.3rem;
+      display: flex;
+      align-items: baseline;
+    }
+  }
 }
 .offer-pix {
   grid-area: pix;
+}
+.show-img {
+  height: 308px;
+  object-fit: cover;
+  aspect-ratio: 2 / 1;
+  border-radius: 6px;
 }
 .interrest-box {
   grid-area: interrest;
@@ -19,23 +52,33 @@
   grid-auto-rows: minmax(100px, auto);
   grid-gap: 4px;
 }
+.interrest {
+  height: 100px;
+  width: 120px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  line-height: 18px;
+  justify-content: center;
+}
 .offer-btn-box {
   grid-area: btn;
+  width: max-content;
 }
-.booking {
+.book {
   grid-area: booking;
 }
 //TABS
 @media screen and (max-width: 1150px){
   .show {
-    // grid-template-rows: 56px 5% 3fr 1fr 3fr 40px;
     grid-template-areas:
       "navbar navbar navbar navbar navbar"
-      ". . . . ."
-      ". pix . interrest ."
-      ". btn btn . ."
-      ". booking booking booking ."
-      ". footer footer footer.";
+      ". title title title ."
+      ". pix pix interrest ."
+      ". btn btn booking ."
+      ". footer footer footer ."
   }
 }
 //SD
@@ -43,11 +86,37 @@
   .show {
     // grid-template-rows: 56px 1fr auto 1fr 1fr 40px;
     grid-template-areas:
-      "navbar navbar navbar"
-      ". pix ."
-      ". interrest ."
-      ". btn ."
-      ". booking ."
-      ". footer .";
+    "navbar navbar navbar"
+    "title title title"
+    "pix pix pix"
+    ". interrest ."
+    ". btn ."
+    ". booking ."
+    ". footer .";
+    gap: 20px;
+  }
+  .titleshow {
+    margin-top: 40px;
+    height: unset;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .show-img {
+    height: 166px;
+    width: 100vw;
+    border-radius: none;
+  }
+  .interrest {
+    height: 14vh;
+    width: 28vw;
+    font-size: 0.8em;
+    line-height: 1.1em;
+  }
+  .offer-btn-box {
+    grid-gap: 8px;
+    grid-template-columns: 1fr 1fr;
+    display: grid;
   }
 }
