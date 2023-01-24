@@ -7,7 +7,9 @@
     <% @offers.each do |offer|  %>
       <li>
         <div class="card-trip">
-          <%= cl_image_tag offer.photo.key, height: 350, width: 450, crop: :fill, class: "image" %>
+          <% if offer.photo.attached? %>
+            <%= cl_image_tag offer.photo.key, height: 350, width: 450, crop: :fill, class: "image" %>
+          <% end %>
           <div class="card-trip-infos">
             <div class="destination">
               <p class="capitale"><%= offer.city %>,</p><p><%= offer.country %></p>
