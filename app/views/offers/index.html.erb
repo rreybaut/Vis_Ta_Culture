@@ -9,13 +9,18 @@
         <div class="card-trip">
           <%= cl_image_tag offer.photo.key, height: 350, width: 450, crop: :fill, class: "image" %>
           <div class="card-trip-infos">
-            <div class="trip-details">
+            <div class="destination">
               <p class="capitale"><%= offer.city %>,</p><p><%= offer.country %></p>
-              <p class="card-price"><strong>•</strong></p>
-              <p><em>price/day:</em></p>
-              <p class="card-price">$<strong><%= offer.price %></strong></p>
             </div>
-            <%= link_to "Book now", offer_path(offer), class: "btn btn-booknow" %>
+            <div class="trip-details">
+              <div class="price">
+                <p><em>Price per Day:</em></p>
+                <p class="card-price">$<strong><%= offer.price %></strong></p>
+              </div>
+              <div class="book">
+                <%= link_to "Book now", offer_path(offer), class: "btn btn-booknow" %>
+              </div>
+            </div>
           </div>
         </div>
       </li>

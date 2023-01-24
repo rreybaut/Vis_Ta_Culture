@@ -11,31 +11,41 @@
   }
   .capitale {
     color: $purple;
+    font-size: 18px;
     font-weight: bold !important;
     text-transform: uppercase;
   }
   p {
     font-weight: 400 !important;
     font-size: 16px;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
   }
 }
 .card-trip-infos {
-  padding: 12px;
+  padding: 12px 18px 8px;
   display: flex;
+  flex-direction: column;
+}
+.destination {
+  height: 30px;
+  display: flex;
+  gap: 8px;
   align-items: baseline;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 .trip-details {
   display: flex;
-  gap: 4px;
-}
-.ville-pays {
-  display: flex;
-  gap: 8px;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
 }
 .card-price {
   color: $purple;
+  font-size: 22px !important;
+}
+.price {
+  display: flex;
+  gap: 4px;
+  align-items: baseline;
+  margin-right: 12px;
 }
