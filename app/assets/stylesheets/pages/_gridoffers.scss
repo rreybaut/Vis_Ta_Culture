@@ -20,7 +20,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: auto;
-  gap: 12px;
+  gap: 24px;
 }
 .card-trip {
   max-width: 30vw;
@@ -38,7 +38,6 @@
   }
   .cards-offers {
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
   }
   .card-trip {
     max-width: 44vw;
@@ -57,7 +56,6 @@
   }
   .cards-offers {
     grid-template-columns: 1fr;
-    gap: 12px;
   }
   .card-trip {
     max-width: 80vw;
