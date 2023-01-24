@@ -1,6 +1,16 @@
 <div class="grid show">
   <%= render "shared/navbar" %>
 
+  <div class="titleshow">
+      <h2 class="bold"><%= @offer.city%></h2><p> | <%= @offer.country %> | </p>
+      <div class="priceshow">
+        <p>Price per Day:</p>
+        <div class="gapprice">
+          <h3>$</h3><h2 class="bold"><%= @offer.price %></h2>
+        </div>
+      </div>
+  </div>
+
   <div class="offer-pix">
     <% if @offer.photo.attached? %>
       <%= cl_image_tag @offer.photo.key, height: 350, width: 450, crop: :fill, class: "show-img" %>
