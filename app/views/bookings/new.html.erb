@@ -1,9 +1,9 @@
-<div class="grid formbook">
+<div class="fcreate">
   <%= render "shared/navbar" %>
 
   <h1 class="lighttitle">Book your offer</h1>
 
-  <div class="new-offer">
+  <div class="formbook">
     <%= simple_form_for [@offer, @booking] do |f| %>
       <h3>Choose your dates please :</h3>
       <%= f.input :date, as: :date%>
@@ -15,8 +15,10 @@
       <%= f.input :comment, as: :text, label: false %>
       <br>
       <br>
-      <%= f.submit "Save", class:"btn btn-flat"%><br><br>
-      <%= link_to "< Offer", offer_path(@offer), class: "btn btn-book" %>
+      <div class="btnform">
+        <%= f.submit "Save", class:"btn btn-flat"%><br><br>
+        <%= link_to "< Offer", offer_path(@offer), class: "btn btn-book" %>
+      </div>
     <% end %>
   </div>
 

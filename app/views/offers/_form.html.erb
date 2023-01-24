@@ -1,34 +1,49 @@
 <div class="new-container">
-  <div class="new-offer">
+  <div class="formbook">
     <%= simple_form_for offer do |f| %>
       <div class="oform">
         <%= f.input :country, as: :string %>
         <%= f.input :city %>
-        <%= f.input :price %>
+        <div class="select-arrow">
+          <%= f.input :price, label: "Price per Day" %>
+          <span class="arrow-down"></span>
+        </div>
       </div>
         <h2 class="lighttitle">Define options please</h2>
       <div class="checkbox">
-        <%= f.check_box :lodging %>
-        <%= f.label :lodging %>
-        <%= f.check_box :meal %>
-        <%= f.label :meal %>
-        <%= f.check_box :pet %>
-        <%= f.label :pet %>
-        <%= f.check_box :excursion %>
-        <%= f.label :excursion %>
-        <%= f.check_box :smoker %>
-        <%= f.label :smoker %>
-        <%= f.check_box :child %>
-        <%= f.label :child, "Family" %>
-        <div class="formpix">
-          <%= f.input :photo, as: :file, label: "Choose a photo" %>
+        <div>
+          <%= f.check_box :lodging %>
+          <%= f.label :lodging %>
         </div>
+        <div>
+          <%= f.check_box :meal %>
+          <%= f.label :meal %>
+        </div>
+        <div>
+          <%= f.check_box :pet %>
+          <%= f.label :pet %>
+        </div>
+        <div>
+          <%= f.check_box :excursion %>
+          <%= f.label :excursion %>
+        </div>
+        <div>
+          <%= f.check_box :smoker %>
+          <%= f.label :smoker %>
+        </div>
+        <div>
+          <%= f.check_box :child %>
+          <%= f.label :child, "Family" %>
+        </div>
+      </div>
+      <div class="formpix">
+        <h6>
+          <%= f.input :photo, as: :file, label: "Choose a photo" %>
+        </h6>
       </div>
       <div class="btnform">
         <%= f.submit "Save", class:"btn btn-flat"%><br><br>
-        <div class="back">
           <%= link_to "< Offers", offers_path, class: "btn btn-book" %>
-        </div>
       </div>
     <% end %>
   </div>

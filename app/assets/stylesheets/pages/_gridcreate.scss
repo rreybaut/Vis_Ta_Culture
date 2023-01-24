@@ -1,4 +1,4 @@
-.fbook {
+.fcreate {
   height: 100vh;
   background-image: asset-url("accueil_bg_33.webp");
   background-position: center;
@@ -33,7 +33,7 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 @media screen and (max-width: 1550px){
-  .formbook {
+  .fcreate {
     // grid-template-rows: 110px 5% 1fr auto 8px 40px;
     grid-template-areas:
       "navbar"
@@ -41,7 +41,7 @@
   }
 }
 @media screen and (max-width: 550px){
-  .formbook {
+  .fcreate {
     grid-template-areas:
       "navbar"
       "footer";
