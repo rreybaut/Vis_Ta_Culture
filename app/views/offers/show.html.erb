@@ -85,13 +85,15 @@
     <ul>
       <% @offer.bookings.each do |booking| %>
         <h3>Your booking</h3>
-        <li>
-          <%= booking.date %>
-          <br>
-          <%= booking.comment %>
-          <br>
-          <%= link_to "delete", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?'}, class: "btn btn-flat" %>
-        </li>
+        <div class="bookinfos">
+          <li>
+            <%= booking.date %>
+            <br>
+            <%= booking.comment %>
+            <br>
+            <%= link_to "Cancel", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?'}, class: "btn btn-cancel" %>
+          </li>
+        </div>
       <% end %>
     </ul>
   </div>

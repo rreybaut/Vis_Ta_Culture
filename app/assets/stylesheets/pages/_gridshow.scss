@@ -69,6 +69,16 @@
 }
 .book {
   grid-area: booking;
+  h3 {
+    color: $purple;
+  }
+}
+.bookinfos {
+  background: white;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9em;
+  font-family: roboto light;
 }
 //TABS
 @media screen and (max-width: 1150px){

@@ -11,6 +11,19 @@
   opacity: 1;
 }
 .btn-flat {
+  width: 70px;
+  height: 30px;
+  padding: 2px 4px;
+  color: $white;
+  border-radius: 4px;
+  background: $purple;
+  transition: 0.3s ease;
+}
+.btn-flat:hover {
+  background: $pink;
+  color: $white;
+}
+.btn-cancel {
   width: 110px;
   color: $white;
   padding: 8px 24px;
@@ -18,7 +31,7 @@
   background: $purple;
   transition: 0.3s ease;
 }
-.btn-flat:hover {
+.btn-cancel:hover {
   background: $pink;
   color: $white;
 }
