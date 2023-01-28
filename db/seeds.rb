@@ -15,6 +15,7 @@ User.destroy_all
 user1 = User.create!(email: "karine.egler@gmail.com", password: "123456", first_name: "Karine", last_name: "Egler", buyer: false, seller: true)
 user2 = User.create!(email: "valerianpallas@gmail.com", password: "123456", first_name: "Valeria", last_name: "Pallas", buyer: false, seller: true)
 user3 = User.create!(email: "rreybaut@gmail.com", password: "123456", first_name: "Raphael", last_name: "Reybaut", buyer: false, seller: true)
+user4 = User.create!(email: "diana.sharky@sharky.com", password: "123456", first_name: "Diana", last_name: "Sharky", buyer: false, seller: true)
 
 file = URI.open("https://res.cloudinary.com/ddmj8ng81/image/upload/v1669286708/tango_zebnpw.jpg")
 offer = Offer.create!(country: "Argentine", city: "Buenos Aires", price: "25.00", lodging: true, meal: true, pet: false,smoker: false, excursion: true, child: true,user_id: user1.id)
