@@ -8,7 +8,7 @@
           <span class="arrow-down"></span>
         </div>
       </div>
-        <h2 class="lighttitle">Define options please</h2>
+        <h2 class="lighttitle">Choose interrests</h2>
       <div class="checkbox">
         <div>
           <%= f.check_box :lodging %>
@@ -35,10 +35,10 @@
           <%= f.label :child, "Family" %>
         </div>
       </div>
-      <div class="formpix">
-        <h6>
-          <%= f.input :photo, as: :file, label: "Choose a photo" %>
-        </h6>
+      <div class="lighttitle">
+        <h2>
+          <%= f.input :photo, as: :file, label: "Upload the offer picture" %>
+        </h2>
       </div>
       <div class="btnform">
         <%= f.submit "Save", class:"btn btn-flat"%><br><br>

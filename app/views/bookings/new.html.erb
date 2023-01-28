@@ -1,7 +1,9 @@
 <div class="grid fcreate">
   <%= render "shared/navbar" %>
 
-  <h1 class="titlebook">Book your offer</h1>
+  <div class="titlebook">
+    <h1 class="lighttitle">Book your offer</h1>
+  </div>
 
   <div class="formbook">
     <%= simple_form_for [@offer, @booking] do |f| %>
