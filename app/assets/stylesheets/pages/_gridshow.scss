@@ -18,9 +18,9 @@
   flex-direction: row;
   .priceshow {
     display: flex;
+    gap: 0.3rem;
     align-items: baseline;
     .gapprice {
-      gap: 0.3rem;
       display: flex;
       align-items: baseline;
     }
@@ -66,9 +66,6 @@
 .bookings {
   grid-area: booking;
   width: -webkit-fill-available;
-  h3 {
-    color: $purple;
-  }
 }
 .book {
   gap: 16px;

@@ -2,11 +2,11 @@
   <%= render "shared/navbar" %>
 
   <div class="titleshow">
-      <h2 class="bold"><%= @offer.city%></h2><p> | <%= @offer.country %> | </p>
+      <h3 class="bold"><%= @offer.city%></h3><p> | <%= @offer.country %> | </p>
       <div class="priceshow">
         <p>Price per Day:</p>
         <div class="gapprice">
-          <h3>$</h3><h2 class="bold"><%= @offer.price %></h2>
+          <h3>$</h3><h3 class="bold"><%= @offer.price %></h3>
         </div>
       </div>
   </div>
@@ -24,7 +24,7 @@
       <p>City<br><%= @offer.city %></p>
     </div>
     <div class="interrest">
-      <p>Price<br><%= @offer.price %> $</p>
+      <p>Price per day<br>$<%= @offer.price %></p>
     </div>
     <div class="interrest">
       <p>Lodging<br>
@@ -83,18 +83,23 @@
   </div>
   <h3 class="booktitle">Bookings</h3>
   <div class="bookings">
-      <div class="book">
+    <div class="book">
+      <% if @offer.bookings %>
         <% @offer.bookings.each do |booking| %>
           <div class="bookinfos">
-            <span class="bold"><%= booking.user.last_name %> <%= booking.user.first_name %></span> • Date: <%= booking.date %>
             <li>
-              <em><%= booking.comment %></em>
+              <span class="bold"><%= booking.user.last_name %> <%= booking.user.first_name %></span> • Date: <%= booking.date %>
               <br>
-              <%= link_to "Cancel", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?'}, class: "btn btn-cancel" %>
+              <span><em><%= booking.comment %></em></span>
+              <br>
+              <span class="cancelb"><%= link_to "Cancel", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?'}, class: "btn btn-cancel" %></span>
             </li>
           </div>
         <% end %>
-      </div>
+      <% else %>
+        <p>There are not current bookings</p>
+      <% end %>
+    </div>
   </div>
 
   <%= render "shared/footer" %>
