@@ -4,7 +4,7 @@
   align-items: start;
   grid-template-areas:
   "navbar navbar navbar navbar navbar"
-  ". title title . ."
+  ". title title booktitle ."
   ". pix interrest booking ."
   ". btn . . ."
   ". footer footer footer .";
@@ -58,6 +58,11 @@
   grid-area: btn;
   width: max-content;
 }
+.booktitle {
+  grid-area: booktitle;
+  height: 0;
+  margin: 0;
+}
 .bookings {
   grid-area: booking;
   width: -webkit-fill-available;
@@ -85,6 +90,7 @@
       ". title title title ."
       ". pix interrest interrest ."
       ". btn btn btn ."
+      ". booktitle booktitle . ."
       ". booking booking booking ."
       ". footer footer footer ."
     }
@@ -114,6 +120,7 @@
     "pix pix pix"
     ". interrest ."
     ". btn ."
+    ". booktitle."
     ". booking ."
     ". footer .";
     gap: 20px;
