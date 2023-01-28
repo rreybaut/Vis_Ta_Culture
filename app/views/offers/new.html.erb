@@ -7,7 +7,9 @@
   <div class="formbook">
     <%= render "form", offer: @offer %>
   </div>
-  <%= link_to "< Offers", offers_path, class: "btn btn-book" %>
+  <div class="back">
+    <%= link_to "< Offers", offers_path, class: "btn btn-book" %>
+  </div>
 
   <%= render "shared/footer" %>
 </div>
