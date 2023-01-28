@@ -3,12 +3,16 @@
   background-image: asset-url("accueil_bg_33.webp");
   background-position: center;
   background-size: cover;
-    grid-template-areas:
-        "navbar navbar navbar navbar navbar"
-        ". titleb titleb titleb ."
-        ". formb formb formb ."
-        ". . back . ."
-        ". footer footer footer .";
+  text-align: left;
+  // display: grid;
+  align-items: start;
+  justify-items: start;
+  grid-template-areas:
+    "navbar navbar navbar navbar navbar"
+    ". titleb titleb titleb ."
+    ". formb formb formb ."
+    ". . back . ."
+    ". footer footer footer .";
 }
 .titlebook {
   grid-area: titleb;
@@ -19,14 +23,8 @@
   flex-direction: column;
   align-items: center;
 }
-.btnform {
+.back {
   grid-area: back;
-  // line-height: 8px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
 }
 .checkbox {
   display: grid;

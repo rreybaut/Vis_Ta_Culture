@@ -1,5 +1,4 @@
 .offers {
-  // grid-template-rows: 56px 20px auto 20px 1fr 5% 40px;
   display: grid;
   grid-row-gap: 20px;
   grid-template-areas:
@@ -28,7 +27,6 @@
 // TABS
 @media screen and (max-width: 1150px){
   .offers {
-    // grid-template-rows: 56px 5% 1fr auto 40px;
     grid-template-areas:
       "navbar navbar navbar navbar navbar"
       ". . . . ."
@@ -46,7 +44,6 @@
 // SD
 @media screen and (max-width: 550px){
   .offers {
-    // grid-template-rows: 56px 5% 1fr auto 40px;
     grid-template-areas:
       "navbar navbar navbar"
       ". . ."

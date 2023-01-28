@@ -2,6 +2,8 @@
   background-image: asset-url("accueil_bg.webp");
   background-position: center;
   background-size: cover;
+  text-align: center;
+  font-size: 1.4em;
   grid-template-rows: 56px 5% 1fr 80px 40px;
   grid-template-areas:
     "navbar navbar navbar navbar navbar"

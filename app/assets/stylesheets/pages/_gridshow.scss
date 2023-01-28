@@ -1,11 +1,11 @@
 .show {
   grid-column-gap: 20px;
-    grid-template-areas:
-    "navbar navbar navbar navbar navbar"
-    ". title title . ."
-    ". pix interrest booking ."
-    ". btn . . ."
-    ". footer footer footer .";
+  grid-template-areas:
+  "navbar navbar navbar navbar navbar"
+  ". title title . ."
+  ". pix interrest booking ."
+  ". btn . . ."
+  ". footer footer footer .";
 }
 .titleshow {
   grid-area: title;
