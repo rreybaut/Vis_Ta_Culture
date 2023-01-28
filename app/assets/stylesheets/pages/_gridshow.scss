@@ -1,11 +1,13 @@
 .show {
   grid-column-gap: 20px;
-    grid-template-areas:
-    "navbar navbar navbar navbar navbar"
-    ". title title . ."
-    ". pix interrest booking ."
-    ". btn . . ."
-    ". footer footer footer .";
+  justify-items: start;
+  align-items: start;
+  grid-template-areas:
+  "navbar navbar navbar navbar navbar"
+  ". title title . ."
+  ". pix interrest booking ."
+  ". btn . . ."
+  ". footer footer footer .";
 }
 .titleshow {
   grid-area: title;
@@ -67,24 +69,48 @@
   grid-area: btn;
   width: max-content;
 }
-.book {
+.bookings {
   grid-area: booking;
+  width: -webkit-fill-available;
+  h3 {
+    color: $purple;
+  }
+  .book {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.bookinfos {
+  background: white;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9em;
+  font-family: roboto light;
 }
 //TABS
-@media screen and (max-width: 1150px){
+@media screen and (min-width: 850px) and (max-width: 1150px){
   .show {
+    grid-column-gap: 20px;
     grid-template-areas:
       "navbar navbar navbar navbar navbar"
       ". title title title ."
-      ". pix pix interrest ."
-      ". btn btn booking ."
+      ". pix interrest interrest ."
+      ". btn btn btn ."
+      ". booking booking booking ."
       ". footer footer footer ."
+    }
+  .titleshow {
+    margin-bottom: 40px;
+    margin-top: 60px;
   }
 }
 //SD
-@media screen and (max-width: 550px){
+@media screen and (max-width: 850px){
   .show {
-    // grid-template-rows: 56px 1fr auto 1fr 1fr 40px;
+    font-size: 1.3em;
+    grid-template-columns: 1fr 8fr 1fr;
+    justify-items: center;
     grid-template-areas:
     "navbar navbar navbar"
     "title title title"
@@ -103,11 +129,11 @@
     flex-direction: row;
     justify-content: center;
   }
-  .show-img {
-    height: 166px;
-    width: 100vw;
-    border-radius: none;
-  }
+  // .show-img {
+  //   height: 30vh;
+  //   width: 90vw;
+  //   border-radius: none;
+  // }
   .interrest {
     height: 14vh;
     width: 28vw;

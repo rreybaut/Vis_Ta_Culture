@@ -81,19 +81,20 @@
     <%= link_to "Delete", offer_path(@offer), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-flat" %>
     <%= link_to "< Offers", offers_path, class: "btn btn-book" %>
   </div>
-  <div class="book">
-    <ul>
-      <% @offer.bookings.each do |booking| %>
-        <h3>Your booking</h3>
-        <li>
-          <%= booking.date %>
-          <br>
-          <%= booking.comment %>
-          <br>
-          <%= link_to "delete", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?'}, class: "btn btn-flat" %>
-        </li>
-      <% end %>
-    </ul>
+  <div class="bookings">
+    <h4>Bookings</h4>
+      <div class="book">
+        <% @offer.bookings.each do |booking| %>
+          <div class="bookinfos">
+            <%= current_user.last_name %> <%= current_user.first_name %> • Date: <%= booking.date %>
+            <li>
+              Note: <%= booking.comment %>
+              <br>
+              <%= link_to "Cancel", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?'}, class: "btn btn-cancel" %>
+            </li>
+          </div>
+        <% end %>
+      </div>
   </div>
 
   <%= render "shared/footer" %>

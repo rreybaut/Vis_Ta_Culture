@@ -2,6 +2,7 @@
   list-style-type: none;
 }
 .menu {
+  text-align: center;
   display: inline-block;
   ul {
     padding: 0px;
@@ -20,7 +21,6 @@
   gap: 4px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   transform: scale(0);
   transform-origin: top center;
   transition: all 300ms ease-in-out;

@@ -2,6 +2,8 @@
   background-image: asset-url("accueil_bg.webp");
   background-position: center;
   background-size: cover;
+  text-align: center;
+  font-size: 1.4em;
   grid-template-rows: 56px 5% 1fr 80px 40px;
   grid-template-areas:
     "navbar navbar navbar navbar navbar"
@@ -13,8 +15,7 @@
 main {
   grid-area: main;
   color: $white;
-  text-shadow: #005e67 0 0 8px;
-    background: linear-gradient(90deg, #00b5d1de, #00b5d1d1 100%);
+  background: linear-gradient(90deg, #00b5d1de, #00b5d1d1 100%);
   padding: 8px 12px;
   border-radius: 8px;
 }
@@ -29,7 +30,6 @@ main {
   }
   .jingle {
     color: $white;
-    text-shadow: #005e67 0 0 8px;
     background: linear-gradient(90deg, #00b5d1de, #00b5d1d1 100%);
     padding: 8px 12px;
     border-radius: 8px;
@@ -54,7 +54,7 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-position-y: 56px;
-    background-size: unset;
+    background-size: 550px;
     grid-template-rows: 56px 232px 2fr 3fr 40px;
       grid-template-areas:
         "navbar navbar navbar"

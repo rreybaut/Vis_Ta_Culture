@@ -1,15 +1,16 @@
 .grid {
   min-height: 100vh;
-  text-align: center;
-  font-size: 1.4em;
   display: grid;
   align-content: space-between;
   align-items: center;
   justify-items: center;
   grid-gap: 8px;
   grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
-  h1, p {
-    font-weight: lighter;
+  h1 {
+    font-weight: 100;
+  }
+  p {
+    font-family: Roboto light;
   }
 }
 nav {

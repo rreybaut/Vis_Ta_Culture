@@ -1,4 +1,4 @@
-<div class="fcreate">
+<div class="grid fcreate">
   <%= render "shared/navbar" %>
   <div class="titlebook">
     <h1 class="lighttitle">Create your offer</h1>
@@ -6,6 +6,9 @@
 
   <div class="formbook">
     <%= render "form", offer: @offer %>
+  </div>
+  <div class="back">
+    <%= link_to "< Offers", offers_path, class: "btn btn-book" %>
   </div>
 
   <%= render "shared/footer" %>
