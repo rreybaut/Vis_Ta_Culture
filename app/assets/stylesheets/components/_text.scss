@@ -1,20 +1,24 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: Roboto Light;
+  color: $purple;
+}
 .lighttitle {
   padding-top: 20px;
   text-align: center;
-  color: $purple;
-  font-family: Roboto Light;
 }
 .regutitle {
   padding-top: 20px;
   text-align: center;
   color: $purple;
-  font-weight: 400;
 }
 .oform {
-  color: $white;
+  color: $purple;
   text-transform: uppercase;
 }
 .formpix {
   color: $purple;
   text-transform: uppercase;
+}
+.bold {
+  font-weight: bolder;
 }
