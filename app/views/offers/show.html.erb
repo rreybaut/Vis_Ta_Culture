@@ -99,13 +99,10 @@
       <% if @offer.bookings %>
         <% @offer.bookings.each do |booking| %>
           <div class="bookinfos">
-            <li>
-              <span class="bold"><%= booking.user.last_name %> <%= booking.user.first_name %></span> • Date: <%= booking.date %>
-              <br>
-              <span><em><%= booking.comment %></em></span>
-              <br>
-              <span class="cancelb"><%= link_to "Cancel", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?'}, class: "btn btn-cancel" %></span>
-            </li>
+            <div class="bold"><%= booking.user.last_name %> <%= booking.user.first_name %> <i class="fa-regular fa-comment"></i></div>
+            <div><em>Date: <%= booking.date %></em></div>
+            <div><em><%= booking.comment %></em></div>
+            <div class="cancelb"><%= link_to "Cancel", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?'}, class: "btn btn-cancel" %></div>
           </div>
         <% end %>
       <% else %>
