@@ -20,7 +20,7 @@ footer {
   grid-area: footer;
 }
 // TABS
-@media screen and (max-width: 1150px){
+@media screen and (max-width: 1260px){
   .grid {
     grid-template-columns: 1fr 3fr 1fr 3fr 1fr;
   }

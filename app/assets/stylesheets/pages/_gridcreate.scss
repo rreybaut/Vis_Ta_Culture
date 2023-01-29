@@ -27,7 +27,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-@media screen and (max-width: 1550px){
+@media screen and (max-width: 1260px){
   .fcreate {
     grid-template-areas:
       "navbar navbar navbar navbar navbar"
