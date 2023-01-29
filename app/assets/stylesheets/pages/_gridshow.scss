@@ -32,29 +32,29 @@
   grid-area: pix;
 }
 .show-img {
-  width: 450px;
-  height: auto;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  aspect-ratio: 2 / 1.1;
 }
 .interrest-box {
   grid-area: interrest;
+  width: -webkit-fill-available;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-auto-rows: minmax(100px, auto);
+  // grid-template-rows: 1fr 1fr 1fr;
+  // grid-auto-rows: minmax(100px, auto);
   grid-gap: 8px;
 }
 .interrest {
-  height: 100px;
-  width: 120px;
+  font-size: initial;
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 8px;
   border-radius: 6px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  line-height: 18px;
   justify-content: center;
 }
 .offer-btn-box {
@@ -66,7 +66,7 @@
 }
 .bookings {
   grid-area: booking;
-  width: -webkit-fill-available;
+  // width: -webkit-fill-available;
 }
 .book {
   gap: 16px;
@@ -79,55 +79,43 @@
   padding: 8px 12px;
   font-size: 0.9em;
 }
-//TABS
-@media screen and (min-width: 850px) and (max-width: 1400px){
+//TAB L
+@media screen and (max-width: 1260px){
   .show {
-    grid-column-gap: 20px;
-    grid-template-areas:
-      "navbar navbar navbar navbar navbar"
-      ". title title title ."
-      ". pix interrest interrest ."
-      ". btn btn btn ."
-      ". booktitle booktitle . ."
-      ". booking booking booking ."
-      ". footer footer footer ."
-    }
+  grid-template-areas:
+  "navbar navbar navbar navbar navbar"
+  ". title title title ."
+  ". pix interrest interrest ."
+  ". btn . . ."
+  ". booktitle . . ."
+  ". booking booking booking ."
+  ". footer footer footer .";
+  }
   .titleshow {
     margin-bottom: 40px;
     margin-top: 60px;
   }
-  .book {
-    gap: 16px;
-    display: flex;
-    flex-direction: row;
-  }
-  .bookinfos {
-    width: 100vw;
-    height: max-content;
-  }
 }
-//TABS 2
-@media screen and (max-width: 850px){
-  .show {
-    font-size: 1.3em;
-    grid-template-columns: 1fr 8fr 1fr;
-    justify-items: center;
-    grid-template-areas:
-    "navbar navbar navbar"
-    "pix pix pix"
-    "title title title"
-    ". interrest ."
-    ". btn ."
-    ". booktitle."
-    ". booking ."
-    ". footer .";
-    gap: 20px;
-  }
-}
+// //TAB S
+// @media screen and (max-width: 900px){
+//   .show {
+//     grid-template-areas:
+//     "navbar navbar navbar navbar navbar"
+//     ". title title title ."
+//     ". pix pix pix ."
+//     ". interrest interrest . ."
+//     ". btn . . ."
+//     ". booktitle . . ."
+//     ". booking booking booking ."
+//     ". footer footer footer .";
+//   }
+//   .interrest-box {
+//     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+//   }
+// }
 //SD
-@media screen and (max-width: 550px){
+@media screen and (max-width: 900px){
   .show {
-    font-size: 1.3em;
     grid-template-columns: 1fr 8fr 1fr;
     justify-items: center;
     grid-template-areas:
@@ -140,36 +128,20 @@
     ". booking ."
     ". footer .";
     gap: 20px;
-  }
-  .show-img {
-    width: 100vw;
   }
   .titleshow {
     margin-top: 40px;
-    height: unset;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
   }
-  .interrest {
-    height: 100px;
-    width: 100px;
-    font-size: 0.8em;
-    line-height: 1.1em;
+  .interrest-box {
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .offer-btn-box {
     grid-gap: 8px;
     grid-template-columns: 1fr 1fr;
     display: grid;
-  }
-}
-//SD 2
-@media screen and (max-width: 360px){
-  .interrest {
-    height: 100px;
-    width: 80px;
-    font-size: 0.7em;
-    line-height: 1.1em;
   }
 }
