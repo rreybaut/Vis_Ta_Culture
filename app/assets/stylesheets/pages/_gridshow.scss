@@ -13,7 +13,7 @@
   ". pix interrest . ."
   ". btn btn btn ."
   ". booktitle . . ."
-  ". booking booking booking ."
+  ". booking booking . ."
   ". footer footer footer .";
 }
 .titleshow {
@@ -39,8 +39,6 @@
 }
 .offer-pix {
   grid-area: pix;
-  // height: -webkit-fill-available;
-  // width: -webkit-fill-available;
 }
 .show-img {
   width: 100%;
@@ -73,14 +71,18 @@
 }
 .booktitle {
   grid-area: booktitle;
+  margin: 0;
+  width: -webkit-fill-available;
+  text-align: center;
 }
 .bookings {
   grid-area: booking;
+  width: -webkit-fill-available;
 }
 .book {
   gap: 16px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: end;
   margin-bottom: 20px;
 }
@@ -121,7 +123,7 @@
     ". title title title ."
     ". pix interrest interrest ."
     ". btn btn btn ."
-    ". booktitle . . ."
+    ". booktitle booktitle booktitle ."
     ". booking booking booking ."
     ". footer footer footer .";
   }
@@ -137,7 +139,7 @@
   }
   .book {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     margin-bottom: 20px;
   }
 }
@@ -170,9 +172,6 @@
     flex-direction: row;
     justify-content: center;
   }
-  .interrest-box {
-    width: 50vw;
-  }
   .offer-btn-box {
     display: grid;
     width: unset;
@@ -187,7 +186,6 @@
   .book {
     display: grid;
     grid-template-columns: 1fr;
-    width: 50vw;
     margin-bottom: 20px;
   }
 }
