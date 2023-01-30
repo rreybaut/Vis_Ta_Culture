@@ -8,11 +8,21 @@
   <div class="formbook">
     <%= simple_form_for [@offer, @booking] do |f| %>
       <h3>Choose your dates please :</h3>
-      <%= f.input :date, as: :date%>
-      <br>
-      <%# <%= f.label :booked %>
-      <%# <%= f.check_box :booked %>
-      <br>
+      <div class="row">
+        <div class="col">
+          <%= f.input :date, as: :date %>
+          <%= f.input :start_date, as: :string,
+                      wrapper_html: { class: "mb-4" },
+                      label_html: { class: "form-label text-secondary fw-bold" },
+                      input_html: { data: { controller: "flatpickr" } } %>
+        </div>
+        <div class="col">
+          <%= f.input :end_date, as: :string,
+                      wrapper_html: { class: "mb-4" },
+                      label_html: { class: "form-label text-secondary fw-bold" },
+                      input_html: { data: { controller: "flatpickr" } } %>
+        </div>
+        </div>
       <%= f.label "Add a comment:" %>
       <%= f.input :comment, as: :text, label: false %>
       <br>
