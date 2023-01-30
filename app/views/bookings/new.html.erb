@@ -7,20 +7,18 @@
 
   <div class="formbook">
     <%= simple_form_for [@offer, @booking] do |f| %>
-      <h3>Choose your dates :</h3>
-          <%= f.input :date, as: :date, label:"Today", label_html: { class: "bold" }%>
-          <%= f.input :start_date, as: :string, label:"Arrival",
-                      wrapper_html: { class: "mb-4" },
-                      label_html: { class: "bold" },
-                      input_html: { data: { controller: "flatpickr" } } %>
-          <%= f.input :end_date, as: :string, label:"Departure",
-                      wrapper_html: { class: "mb-4" },
-                      label_html: { class: "bold" },
-                      input_html: { data: { controller: "flatpickr" } } %>
-      <%= f.label "Add a comment:" %>
-      <%= f.input :comment, as: :text, label: false %>
-      <br>
-      <br>
+      <%= f.input :start_date, as: :string, label:"Arrival",
+        wrapper_html: { class: "mb-4" },
+        label_html: { class: "bold" },
+        input_html: { data: { controller: "flatpickr" } } %>
+      <%= f.input :end_date, as: :string, label:"Departure",
+        wrapper_html: { class: "mb-4" },
+        label_html: { class: "bold" },
+        input_html: { data: { controller: "flatpickr" } } %>
+      <%= f.input :comment, as: :text, label:"Comment",
+        wrapper_html: { class: "mb-4" },
+        label_html: { class: "bold" },
+        input_html: { data: { controller: "flatpickr" } } %>
       <div class="btnform">
         <%= f.submit "Save", class:"btn btn-flat"%><br><br>
         <%= link_to "< Offer", offer_path(@offer), class: "btn btn-book" %>
