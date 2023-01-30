@@ -3,7 +3,8 @@
   background-image: asset-url("accueil_bg_33.webp");
   background-position: center;
   background-size: cover;
-  grid-column-gap: 20px;
+  // grid-column-gap: 20px;
+  grid-gap: 20px;
   align-items: center;
   justify-items: start;
   grid-template-areas:
@@ -82,13 +83,29 @@
   gap: 16px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  align-items: end;
   margin-bottom: 20px;
 }
+.lineflex {
+  display: flex;
+  height: 50px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 4px;
+}
 .bookinfos {
+  position: relative;
   background: white;
   border-radius: 8px;
-  padding: 8px 12px;
+  padding: 0 20px 20px;
   font-size: 0.9em;
+}
+.cancelb {
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 //TAB L
 @media screen and (max-width: 1260px){
@@ -136,10 +153,10 @@
   }
   .offer-pix {
     grid-area: pix;
-    width: 50vw;
+    width: 60vw;
   }
   .show-img {
-    width: 50vw;
+    width: 60vw;
     aspect-ratio: 2.2/1;
   }
   .titleshow {
@@ -151,7 +168,7 @@
     justify-content: center;
   }
   .interrest-box {
-    width: 50vw;
+    width: 60vw;
   }
   .offer-btn-box {
     display: grid;

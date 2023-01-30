@@ -99,9 +99,8 @@
       <% if @offer.bookings %>
         <% @offer.bookings.each do |booking| %>
           <div class="bookinfos">
-            <div class="bold"><%= booking.user.last_name %> <%= booking.user.first_name %> <i class="fa-regular fa-comment"></i></div>
-            <div><em>Date: <%= booking.date %></em></div>
-            <div><em><%= booking.comment %></em></div>
+            <div class="lineflex bold"><%= booking.user.last_name %> <%= booking.user.first_name %> <i class="fa-regular fa-comment"></i> <p>Date: <%= booking.date %></p></div>
+            <p><em><%= booking.comment %></em></p>
             <div class="cancelb"><%= link_to "Cancel", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?'}, class: "btn btn-cancel" %></div>
           </div>
         <% end %>
