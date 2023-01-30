@@ -1,1 +1,3 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Projet VIS TA CULTURE (5 jours) Lead Dev
+Une web app pour louer un pack “Culture”à l’étranger, être en immersion chez l’habitant…
+https://vistaculture-rreybaut.herokuapp.com/
