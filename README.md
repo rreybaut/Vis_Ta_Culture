@@ -1,3 +1,5 @@
-Projet VIS TA CULTURE (5 jours) Lead Dev
-Une web app pour louer un pack “Culture”à l’étranger, être en immersion chez l’habitant…
+Procjet <strong><a href="https://vistaculture-rreybaut.herokuapp.com/">✈️ Vis ta Culture</a></strong> <em>(5 days project, Le Wagon Nice)</em> Lead Dev
+<br>
+A web app to rent a “Culture” pack abroad, to be immersed in local people’s homes…
+<br>
 https://vistaculture-rreybaut.herokuapp.com/
