@@ -1,9 +1,9 @@
 .home {
+  margin-top: 40px;
   background-image: asset-url("accueil_bg.webp");
   background-position: center;
   background-size: cover;
   text-align: center;
-  font-size: 1.4em;
   grid-template-rows: 56px 5% 1fr 80px 40px;
   grid-template-areas:
     "navbar navbar navbar navbar navbar"
@@ -36,7 +36,7 @@ main {
   }
 }
 // // TABS
-@media screen and (max-width: 1150px){
+@media screen and (max-width: 1260px){
   .home {
     grid-template-rows: 56px 5% 1fr 40px;
     grid-template-areas:

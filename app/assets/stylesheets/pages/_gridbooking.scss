@@ -1,5 +1,5 @@
 .fbook {
-  height: 100vh;
+  margin-top: 40px;
   background-image: asset-url("accueil_bg_33.webp");
   background-position: center;
   background-size: cover;
@@ -21,7 +21,6 @@
 }
 .btnform {
   grid-area: back;
-  // line-height: 8px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -32,9 +31,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-@media screen and (max-width: 1550px){
+@media screen and (max-width: 1260px){
   .formbook {
-    // grid-template-rows: 110px 5% 1fr auto 8px 40px;
     grid-template-areas:
       "navbar"
       "footer";

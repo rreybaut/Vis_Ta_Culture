@@ -1,4 +1,8 @@
 .offers {
+  margin-top: 40px;
+  background-image: asset-url("accueil_bg_33.webp");
+  background-position: center;
+  background-size: cover;
   display: grid;
   grid-row-gap: 20px;
   grid-template-areas:
@@ -25,7 +29,7 @@
   max-width: 30vw;
 }
 // TABS
-@media screen and (max-width: 1150px){
+@media screen and (max-width: 1260px){
   .offers {
     grid-template-areas:
       "navbar navbar navbar navbar navbar"

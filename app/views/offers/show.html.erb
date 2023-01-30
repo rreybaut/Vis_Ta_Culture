@@ -18,68 +18,80 @@
   </div>
   <div class="interrest-box">
     <div class="interrest">
-      <p>Country<br><%= @offer.country %></p>
+      <i class="fa-solid fa-globe"></i>
+      <p>Country</p>
+        <div class="bold"><%= @offer.country %></div>
     </div>
     <div class="interrest">
-      <p>City<br><%= @offer.city %></p>
+      <i class="fa-solid fa-city"></i>
+      <p>City</p>
+        <div class="bold"><%= @offer.city %></div>
     </div>
     <div class="interrest">
-      <p>Price per day<br>$<%= @offer.price %></p>
+      <i class="fa-solid fa-hand-holding-dollar"></i>
+      <p>Price/day</p>
+      <div class="bold">$<%= @offer.price %></div>
     </div>
     <div class="interrest">
-      <p>Lodging<br>
+      <i class="fa-solid fa-bed"></i>
+      <p>Lodging</p>
       <% if @offer.lodging %>
-        <i class="fa-solid fa-bed"></i>
+        <div class="bold">Yes</div>
       <% else %>
-        No
-      <% end %> </p>
+        <div class="bold">No</div>
+      <% end %>
     </div>
     <div class="interrest">
-      <p>Meal<br>included<br>
-      <% if @offer.meal %>
-        <i class="fa-solid fa-utensils"></i>
-      <% else %>
-        No
-      <% end %> </p>
+      <i class="fa-solid fa-utensils"></i>
+        <p>Meal</p>
+        <% if @offer.meal %>
+          <div class="bold">Yes</div>
+        <% else %>
+          <div class="bold">No</div>
+        <% end %>
     </div>
     <div class="interrest">
-      <p>Family<br>with Children<br>
+      <i class="fa-solid fa-bed"></i>
+      <p>Families</p>
+      <% if @offer.child %>
+        <div class="bold">Yes</div>
+      <% else %>
+        <div class="bold">No</div>
+      <% end %>
+    </div>
+    <div class="interrest">
+      <i class="fa-solid fa-paw"></i>
+      <p>Pet</p>
       <% if @offer.pet %>
-        Yes
+        <div class="bold">Yes</div>
       <% else %>
-        No
-      <% end %> </p>
+        <div class="bold">No</div>
+      <% end %>
     </div>
     <div class="interrest">
-      <p>Pets<br>welcome<br>
-      <% if @offer.pet %>
-        <i class="fa-solid fa-paw"></i>
+      <i class="fa-solid fa-smoking"></i>
+      <p>Smoker</p>
+      <% if @offer.smoker %>
+        <div class="bold">Yes</div>
       <% else %>
-        No
-      <% end %> </p>
+        <div class="bold">No</div>
+      <% end %>
     </div>
     <div class="interrest">
-      <p>Smokers<br>welcome<br>
-      <% if @offer.smoker  %>
-        <i class="fa-solid fa-smoking"></i>
-      <% else %>
-        No
-      <% end %> </p>
-    </div>
-    <div class="interrest">
-      <p>Excursion<br>
+      <i class="fa-solid fa-cable-car"></i>
+      <p>Excursion</p>
       <% if @offer.excursion %>
-        <i class="fa-solid fa-cable-car"></i>
+        <div class="bold">Yes</div>
       <% else %>
-        No
-      <% end %> </p>
+        <div class="bold">No</div>
+      <% end %>
     </div>
   </div>
   <div class="offer-btn-box">
-    <%= link_to "Book", new_offer_booking_path(@offer), class: "btn btn-book" %>
+    <%= link_to "< Offers", offers_path, class: "btn btn-pink" %>
     <%= link_to "Modify", edit_offer_path(@offer), data: {turbo_method: :update}, class: "btn btn-flat" %>
     <%= link_to "Delete", offer_path(@offer), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-flat" %>
-    <%= link_to "< Offers", offers_path, class: "btn btn-book" %>
+    <%= link_to "Book", new_offer_booking_path(@offer), class: "btn btn-book" %>
   </div>
   <h3 class="booktitle">Bookings</h3>
   <div class="bookings">
@@ -87,13 +99,9 @@
       <% if @offer.bookings %>
         <% @offer.bookings.each do |booking| %>
           <div class="bookinfos">
-            <li>
-              <span class="bold"><%= booking.user.last_name %> <%= booking.user.first_name %></span> • Date: <%= booking.date %>
-              <br>
-              <span><em><%= booking.comment %></em></span>
-              <br>
-              <span class="cancelb"><%= link_to "Cancel", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?'}, class: "btn btn-cancel" %></span>
-            </li>
+            <div class="lineflex bold"><%= booking.user.last_name %> <%= booking.user.first_name %> <i class="fa-regular fa-comment"></i> <p>Date: <%= booking.date %></p></div>
+            <p><em><%= booking.comment %></em></p>
+            <div class="cancelb"><%= link_to "Cancel", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?'}, class: "btn btn-cancel" %></div>
           </div>
         <% end %>
       <% else %>

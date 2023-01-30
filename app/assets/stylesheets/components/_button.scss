@@ -28,7 +28,7 @@
   padding: 2px 4px;
   color: $white;
   border-radius: 4px;
-  background: $purple;
+  background: $pink;
   transition: 0.3s ease;
 }
 .btn-cancel:hover {
@@ -71,6 +71,18 @@ justify-content: center;
   transition: 0.3s ease;
 }
 .btn-booknow:hover {
+  color: $purple;
+  background: $acid;
+}
+.btn-pink {
+  width: 110px;
+  padding: 8px 24px;
+  color: $white;
+  background: $pink;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+.btn-pink:hover {
   color: $purple;
   background: $acid;
 }
