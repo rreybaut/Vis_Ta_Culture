@@ -7,22 +7,16 @@
 
   <div class="formbook">
     <%= simple_form_for [@offer, @booking] do |f| %>
-      <h3>Choose your dates please :</h3>
-      <div class="row">
-        <div class="col">
-          <%= f.input :date, as: :date %>
-          <%= f.input :start_date, as: :string,
+      <h3>Choose your dates :</h3>
+          <%= f.input :date, as: :date, label:"Today", label_html: { class: "bold" }%>
+          <%= f.input :start_date, as: :string, label:"Arrival",
                       wrapper_html: { class: "mb-4" },
-                      label_html: { class: "form-label text-secondary fw-bold" },
+                      label_html: { class: "bold" },
                       input_html: { data: { controller: "flatpickr" } } %>
-        </div>
-        <div class="col">
-          <%= f.input :end_date, as: :string,
+          <%= f.input :end_date, as: :string, label:"Departure",
                       wrapper_html: { class: "mb-4" },
-                      label_html: { class: "form-label text-secondary fw-bold" },
+                      label_html: { class: "bold" },
                       input_html: { data: { controller: "flatpickr" } } %>
-        </div>
-        </div>
       <%= f.label "Add a comment:" %>
       <%= f.input :comment, as: :text, label: false %>
       <br>
