@@ -10,9 +10,9 @@
   grid-template-areas:
   "navbar navbar navbar navbar navbar"
   ". title title title ."
+  ". pix interrest . ."
   ". btn btn btn ."
-  ". interrest pix . ."
-  ". . booktitle . ."
+  ". booktitle . . ."
   ". booking booking booking ."
   ". footer footer footer .";
 }
@@ -39,8 +39,8 @@
 }
 .offer-pix {
   grid-area: pix;
-  height: -webkit-fill-available;
-  width: -webkit-fill-available;
+  // height: -webkit-fill-available;
+  // width: -webkit-fill-available;
 }
 .show-img {
   width: 100%;
@@ -73,8 +73,6 @@
 }
 .booktitle {
   grid-area: booktitle;
-  text-align: center;
-  width: -webkit-fill-available;
 }
 .bookings {
   grid-area: booking;
@@ -86,6 +84,12 @@
   align-items: end;
   margin-bottom: 20px;
 }
+.nobookings {
+  background: white;
+  border-radius: 8px;
+  padding: 8px 16px;
+  text-align: center;
+}
 .lineflex {
   display: flex;
   height: 50px;
@@ -95,6 +99,7 @@
   gap: 4px;
 }
 .bookinfos {
+  height: -webkit-fill-available;
   position: relative;
   background: white;
   border-radius: 8px;
@@ -114,9 +119,9 @@
     grid-template-areas:
     "navbar navbar navbar navbar navbar"
     ". title title title ."
-    ". btn btn btn ."
     ". pix interrest interrest ."
-    ". . booktitle . ."
+    ". btn btn btn ."
+    ". booktitle . . ."
     ". booking booking booking ."
     ". footer footer footer .";
   }
@@ -143,8 +148,8 @@
     grid-template-areas:
     "navbar navbar navbar"
     "title title title"
-    ". btn ."
     ". pix ."
+    ". btn ."
     ". interrest ."
     ". booktitle."
     ". booking ."
@@ -153,10 +158,8 @@
   }
   .offer-pix {
     grid-area: pix;
-    width: 60vw;
   }
   .show-img {
-    width: 60vw;
     aspect-ratio: 2.2/1;
   }
   .titleshow {
@@ -168,13 +171,18 @@
     justify-content: center;
   }
   .interrest-box {
-    width: 60vw;
+    width: 50vw;
   }
   .offer-btn-box {
     display: grid;
     width: unset;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 8px;
+  }
+  .booktitle {
+    grid-area: booktitle;
+    text-align: center;
+    width: -webkit-fill-available;
   }
   .book {
     display: grid;
@@ -194,6 +202,12 @@
   }
   .interrest-box {
     width: 90vw;
+  }
+  .offer-btn-box {
+    display: grid;
+    width: unset;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
   }
   .book {
     display: grid;
